@@ -55,7 +55,7 @@ Nbjump 中 App、Page、Component 的相关配置，需要配置到 Vue 文件 s
 </script>
 ```
 
-详见 [[FEATURE]优化 SFC config 配置条件编译能力](https://github.com/max-team/Nbjump/issues/35)
+详见 [[FEATURE]优化 SFC config 配置条件编译能力](https://github.com/MengFangui/Nbjump/issues/35)
 :::
 
 

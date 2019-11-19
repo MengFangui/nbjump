@@ -28,7 +28,7 @@ nbjump build [--target, -t swan (default) | wx | h5]
 ```
 
 ## 文档教程
-[https://max-team.github.io/Nbjump/](https://max-team.github.io/Nbjump/)
+[https://MengFangui.github.io/Nbjump/](https://MengFangui.github.io/Nbjump/)
 
 ## 案例
 
@@ -51,11 +51,11 @@ nbjump build [--target, -t swan (default) | wx | h5]
 
 | package | version | CHANGELOG |
 |-|-|-|
-| @nbjump/core | [![](https://img.shields.io/npm/v/@nbjump/core.svg)](https://www.npmjs.com/package/@nbjump/core) | [CHANGELOG](https://max-team.github.io/Nbjump/CHANGELOGS-0.3/core.html) |
-| @nbjump/build | [![](https://img.shields.io/npm/v/@nbjump/build.svg)](https://www.npmjs.com/package/@nbjump/build) | [CHANGELOG](https://max-team.github.io/Nbjump/CHANGELOGS-0.3/build.html) |
-| @nbjump/cli | [![](https://img.shields.io/npm/v/@nbjump/cli.svg)](https://www.npmjs.com/package/@nbjump/cli) | [CHANGELOG](https://max-team.github.io/Nbjump/CHANGELOGS-0.3/cli.html) |
-| @nbjump/cli-template | [![](https://img.shields.io/npm/v/@nbjump/cli-template.svg)](https://www.npmjs.com/package/@nbjump/cli-template) | [CHANGELOG](https://max-team.github.io/Nbjump/CHANGELOGS-0.3/cli-template.html) |
-| @nbjump/api | [![](https://img.shields.io/npm/v/@nbjump/api.svg)](https://www.npmjs.com/package/@nbjump/api) | [CHANGELOG](https://max-team.github.io/Nbjump/CHANGELOGS/api.html) |
+| @nbjump/core | [![](https://img.shields.io/npm/v/@nbjump/core.svg)](https://www.npmjs.com/package/@nbjump/core) | [CHANGELOG](https://MengFangui.github.io/Nbjump/CHANGELOGS-0.3/core.html) |
+| @nbjump/build | [![](https://img.shields.io/npm/v/@nbjump/build.svg)](https://www.npmjs.com/package/@nbjump/build) | [CHANGELOG](https://MengFangui.github.io/Nbjump/CHANGELOGS-0.3/build.html) |
+| @nbjump/cli | [![](https://img.shields.io/npm/v/@nbjump/cli.svg)](https://www.npmjs.com/package/@nbjump/cli) | [CHANGELOG](https://MengFangui.github.io/Nbjump/CHANGELOGS-0.3/cli.html) |
+| @nbjump/cli-template | [![](https://img.shields.io/npm/v/@nbjump/cli-template.svg)](https://www.npmjs.com/package/@nbjump/cli-template) | [CHANGELOG](https://MengFangui.github.io/Nbjump/CHANGELOGS-0.3/cli-template.html) |
+| @nbjump/api | [![](https://img.shields.io/npm/v/@nbjump/api.svg)](https://www.npmjs.com/package/@nbjump/api) | [CHANGELOG](https://MengFangui.github.io/Nbjump/CHANGELOGS/api.html) |
 | @nbjump/components | [![](https://img.shields.io/npm/v/@nbjump/components.svg)](https://www.npmjs.com/package/@nbjump/components) | |
 
 ## Contributing & Discussion

@@ -1,40 +1,40 @@
 # @nbjump/core
 
-## [0.2.22](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.21...@nbjump/core@0.2.22) (2019-09-03)
+## [0.2.22](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.21...@nbjump/core@0.2.22) (2019-09-03)
 
 
 ### Bug Fixes
 
-* **core:** fix navigateBack detached error ([645ac08](https://github.com/max-team/Nbjump/commit/645ac08))
+* **core:** fix navigateBack detached error ([645ac08](https://github.com/MengFangui/Nbjump/commit/645ac08))
 
 
 ### Features
 
-* **core:** 增加生命周期类型定义 ([0773f94](https://github.com/max-team/Nbjump/commit/0773f94))
+* **core:** 增加生命周期类型定义 ([0773f94](https://github.com/MengFangui/Nbjump/commit/0773f94))
 
 
 
 
 
-## [0.2.21](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.20...@nbjump/core@0.2.21) (2019-09-02)
+## [0.2.21](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.20...@nbjump/core@0.2.21) (2019-09-02)
 
 
 ### Bug Fixes
 
-* **core:** remove debug config ([8bef4d6](https://github.com/max-team/Nbjump/commit/8bef4d6))
+* **core:** remove debug config ([8bef4d6](https://github.com/MengFangui/Nbjump/commit/8bef4d6))
 
 
 
 
 
-## [0.2.20](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.19...@nbjump/core@0.2.20) (2019-08-30)
+## [0.2.20](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.19...@nbjump/core@0.2.20) (2019-08-30)
 
 
 ### Features
 
-* **core:** support swan lifecycle-2-0 ([#169](https://github.com/max-team/Nbjump/issues/169)) ([fe655f0](https://github.com/max-team/Nbjump/commit/fe655f0))
-* **core:** 增加类型定义 ([dc3242d](https://github.com/max-team/Nbjump/commit/dc3242d))
-* **core:** 增加类型定义 ([9042b34](https://github.com/max-team/Nbjump/commit/9042b34))
+* **core:** support swan lifecycle-2-0 ([#169](https://github.com/MengFangui/Nbjump/issues/169)) ([fe655f0](https://github.com/MengFangui/Nbjump/commit/fe655f0))
+* **core:** 增加类型定义 ([dc3242d](https://github.com/MengFangui/Nbjump/commit/dc3242d))
+* **core:** 增加类型定义 ([9042b34](https://github.com/MengFangui/Nbjump/commit/9042b34))
 
 
 ### BREAKING CHANGES
@@ -45,20 +45,20 @@
 
 
 
-## [0.2.19](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.18...@nbjump/core@0.2.19) (2019-08-21)
+## [0.2.19](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.18...@nbjump/core@0.2.19) (2019-08-21)
 
 
 ### Features
 
-* **core:** 增加 recognizeImage 类型定义 ([802dec5](https://github.com/max-team/Nbjump/commit/802dec5))
-* **core:** 补充 ts 定义 ([e86a7db](https://github.com/max-team/Nbjump/commit/e86a7db))
-* **core & build:** 小程序 SFC 中支持 Vue.extend() 写法 ([#161](https://github.com/max-team/Nbjump/issues/161)) ([44a6cf5](https://github.com/max-team/Nbjump/commit/44a6cf5))
+* **core:** 增加 recognizeImage 类型定义 ([802dec5](https://github.com/MengFangui/Nbjump/commit/802dec5))
+* **core:** 补充 ts 定义 ([e86a7db](https://github.com/MengFangui/Nbjump/commit/e86a7db))
+* **core & build:** 小程序 SFC 中支持 Vue.extend() 写法 ([#161](https://github.com/MengFangui/Nbjump/issues/161)) ([44a6cf5](https://github.com/MengFangui/Nbjump/commit/44a6cf5))
 
 
 
 
 
-## [0.2.18](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.17...@nbjump/core@0.2.18) (2019-08-08)
+## [0.2.18](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.17...@nbjump/core@0.2.18) (2019-08-08)
 
 **Note:** Version bump only for package @nbjump/core
 
@@ -66,120 +66,120 @@
 
 
 
-## [0.2.17](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.16...@nbjump/core@0.2.17) (2019-08-08)
+## [0.2.17](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.16...@nbjump/core@0.2.17) (2019-08-08)
 
 
 ### Features
 
-* **core:** export Vue and config in wx ([87662a3](https://github.com/max-team/Nbjump/commit/87662a3))
+* **core:** export Vue and config in wx ([87662a3](https://github.com/MengFangui/Nbjump/commit/87662a3))
 
 
 
-## [0.2.16](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.15...@nbjump/core@0.2.16) (2019-07-19)
+## [0.2.16](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.15...@nbjump/core@0.2.16) (2019-07-19)
 
 
 ### Features
 
-* **core:** export config ([94b1173](https://github.com/max-team/Nbjump/commit/94b1173))([#142](https://github.com/max-team/Nbjump/issues/142)) ([c4dfa54](https://github.com/max-team/Nbjump/commit/c4dfa54))
+* **core:** export config ([94b1173](https://github.com/MengFangui/Nbjump/commit/94b1173))([#142](https://github.com/MengFangui/Nbjump/issues/142)) ([c4dfa54](https://github.com/MengFangui/Nbjump/commit/c4dfa54))
 
 
-## [0.2.15](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.14...@nbjump/core@0.2.15) (2019-07-11)
+## [0.2.15](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.14...@nbjump/core@0.2.15) (2019-07-11)
 
 
 ### Bug Fixes
 
-* **core:** fix 切换组件 __inited__ 时 computed 数据错误 ([#133](https://github.com/max-team/Nbjump/issues/133)) ([803bac8](https://github.com/max-team/Nbjump/commit/803bac8))
+* **core:** fix 切换组件 __inited__ 时 computed 数据错误 ([#133](https://github.com/MengFangui/Nbjump/issues/133)) ([803bac8](https://github.com/MengFangui/Nbjump/commit/803bac8))
 
 
 
-## [0.2.14](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.13...@nbjump/core@0.2.14) (2019-07-04)
+## [0.2.14](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.13...@nbjump/core@0.2.14) (2019-07-04)
 
 
 ### Performance Improvements
 
-* **core:** 去掉不需要的初始 setData 和数据字段 ([#129](https://github.com/max-team/Nbjump/issues/129)) ([8a19371](https://github.com/max-team/Nbjump/commit/8a19371))
+* **core:** 去掉不需要的初始 setData 和数据字段 ([#129](https://github.com/MengFangui/Nbjump/issues/129)) ([8a19371](https://github.com/MengFangui/Nbjump/commit/8a19371))
 
 
-## [0.2.13](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.12...@nbjump/core@0.2.13) (2019-06-20)
-
-**Note:** Version bump only for package @nbjump/core
-
-
-## [0.2.12](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.11...@nbjump/core@0.2.12) (2019-06-19)
-
-### Bug Fixes
-
-* **core:** v-model 支持绑定 obj.key [#94](https://github.com/max-team/Nbjump/issues/94) ([6f29098](https://github.com/max-team/Nbjump/commit/6f29098))
-
-
-## [0.2.11](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.10...@nbjump/core@0.2.11) (2019-06-11)
-
-### Features
-
-* **build & core:** class 和 style 属性支持使用过滤器 ([fe652db](https://github.com/max-team/Nbjump/commit/fe652db))
-
-
-## [0.2.10](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.9...@nbjump/core@0.2.10) (2019-05-29)
+## [0.2.13](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.12...@nbjump/core@0.2.13) (2019-06-20)
 
 **Note:** Version bump only for package @nbjump/core
 
 
-## [0.2.9](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.8...@nbjump/core@0.2.9) (2019-05-14)
+## [0.2.12](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.11...@nbjump/core@0.2.12) (2019-06-19)
+
+### Bug Fixes
+
+* **core:** v-model 支持绑定 obj.key [#94](https://github.com/MengFangui/Nbjump/issues/94) ([6f29098](https://github.com/MengFangui/Nbjump/commit/6f29098))
+
+
+## [0.2.11](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.10...@nbjump/core@0.2.11) (2019-06-11)
+
+### Features
+
+* **build & core:** class 和 style 属性支持使用过滤器 ([fe652db](https://github.com/MengFangui/Nbjump/commit/fe652db))
+
+
+## [0.2.10](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.9...@nbjump/core@0.2.10) (2019-05-29)
+
+**Note:** Version bump only for package @nbjump/core
+
+
+## [0.2.9](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.8...@nbjump/core@0.2.9) (2019-05-14)
 
 
 ### Features
 
-* **build & core: (require build@0.2.24+)** add h5 runtime entry ([f1f7ff9](https://github.com/max-team/Nbjump/commit/f1f7ff9))
+* **build & core: (require build@0.2.24+)** add h5 runtime entry ([f1f7ff9](https://github.com/MengFangui/Nbjump/commit/f1f7ff9))
 
 
-## [0.2.8](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.7...@nbjump/core@0.2.8) (2019-05-13)
-
-### Features
-
-* **build & core:** 支持 Vuex ([#46](https://github.com/max-team/Nbjump/issues/46)) ([173a329](https://github.com/max-team/Nbjump/commit/173a329))
-
-
-## [0.2.7](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.6...@nbjump/core@0.2.7) (2019-04-22)
-
+## [0.2.8](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.7...@nbjump/core@0.2.8) (2019-05-13)
 
 ### Features
 
-* **core & build: (require build@0.2.13+)** 微信小程序支持 filter 和复杂表达式 ([9fdb951](https://github.com/max-team/Nbjump/commit/9fdb951))
+* **build & core:** 支持 Vuex ([#46](https://github.com/MengFangui/Nbjump/issues/46)) ([173a329](https://github.com/MengFangui/Nbjump/commit/173a329))
 
 
-
-## [0.2.6](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.5...@nbjump/core@0.2.6) (2019-04-19)
+## [0.2.7](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.6...@nbjump/core@0.2.7) (2019-04-22)
 
 
 ### Features
 
-* **core & build: (require build@0.2.12+)** 支持过滤器和复杂表达式  ([2e13b5e](https://github.com/max-team/Nbjump/commit/2e13b5e))
+* **core & build: (require build@0.2.13+)** 微信小程序支持 filter 和复杂表达式 ([9fdb951](https://github.com/MengFangui/Nbjump/commit/9fdb951))
 
 
 
-## [0.2.5](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.4...@nbjump/core@0.2.5) (2019-04-17)
+## [0.2.6](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.5...@nbjump/core@0.2.6) (2019-04-19)
 
 
 ### Features
 
-* **core & build: (require build@0.2.10+)** 支持跳过实例更新时跳过 computed 通过 properties 传给小程序 `skipLaterCalc` ([6dcf61c](https://github.com/max-team/Nbjump/commit/6dcf61c))
+* **core & build: (require build@0.2.12+)** 支持过滤器和复杂表达式  ([2e13b5e](https://github.com/MengFangui/Nbjump/commit/2e13b5e))
 
 
 
-## [0.2.4](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.3...@nbjump/core@0.2.4) (2019-04-17)
+## [0.2.5](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.4...@nbjump/core@0.2.5) (2019-04-17)
+
+
+### Features
+
+* **core & build: (require build@0.2.10+)** 支持跳过实例更新时跳过 computed 通过 properties 传给小程序 `skipLaterCalc` ([6dcf61c](https://github.com/MengFangui/Nbjump/commit/6dcf61c))
+
+
+
+## [0.2.4](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.3...@nbjump/core@0.2.4) (2019-04-17)
 
 
 ### Bug Fixes
 
-* **core:** v-model in pages not working ([16cbaf4](https://github.com/max-team/Nbjump/commit/16cbaf4))
+* **core:** v-model in pages not working ([16cbaf4](https://github.com/MengFangui/Nbjump/commit/16cbaf4))
 
 
 ### Performance Improvements
 
-* **core:** disable computed props for later render ([50c89fb](https://github.com/max-team/Nbjump/commit/50c89fb))
+* **core:** disable computed props for later render ([50c89fb](https://github.com/MengFangui/Nbjump/commit/50c89fb))
 
 
-## [0.2.3](https://github.com/max-team/Nbjump/compare/@nbjump/core@0.2.3...@nbjump/core@0.2.3) (2019-04-09)
+## [0.2.3](https://github.com/MengFangui/Nbjump/compare/@nbjump/core@0.2.3...@nbjump/core@0.2.3) (2019-04-09)
 
 - initial version
 

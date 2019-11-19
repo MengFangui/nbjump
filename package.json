@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/max-team/Nbjump.git"
+    "url": "git+https://github.com/MengFangui/Nbjump.git"
   },
   "lint-staged": {
     "linters": {

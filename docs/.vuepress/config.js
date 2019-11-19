@@ -48,7 +48,7 @@ module.exports = {
             {text: '0.3.x CHANGELOG', link: '/CHANGELOGS-0.3/core'}
         ],
         lastUpdated: 'Last Updated',
-        repo: 'max-team/Nbjump',
+        repo: 'MengFangui/Nbjump',
         docsDir: 'docs',
         editLinks: true,
         editLinkText: '在 GitHub 上编辑此页'
