@@ -1,5 +1,5 @@
 {
-  "name": "@marsjs/api",
+  "name": "@nbjump/api",
   "version": "1.0.24",
   "browser": "index.js",
   "scripts": {

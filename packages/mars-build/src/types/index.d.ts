@@ -3,7 +3,7 @@
  * @author meixuguang
  */
 
-namespace mars {
+namespace nbjump {
     interface config {
         assets: string[];
         designWidth: boolean;

@@ -1,7 +1,7 @@
 <template>
     <view class="hello">
         <view>
-            <text>https://github.com/max-team/Mars</text>
+            <text>https://github.com/max-team/Nbjump</text>
         </view>
     </view>
 </template>

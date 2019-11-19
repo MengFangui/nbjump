@@ -52,7 +52,7 @@ function clearLine() {
 
 function print(args, level, labelColor) {
     const [label, info = '', ...rest] = args;
-    const target = process.env.MARS_ENV_TARGET;
+    const target = process.env.NBJUMP_ENV_TARGET;
     if (info instanceof Error) {
         console[level](chalk.yellow(`[${target}]`), labelColor(label), labelColor(info.stack));
     }

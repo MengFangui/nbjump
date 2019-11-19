@@ -4,4 +4,4 @@
  * @author zhangwentao
  */
 
-export * from './mars-core';
+export * from './nbjump-core';

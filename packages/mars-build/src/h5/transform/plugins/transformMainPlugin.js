@@ -7,7 +7,7 @@
 
 // module.exports = function getVisitor(options = {}) {
 //     return ({types: t}) => {
-//         const {routes, componentSet, pagesInfo, window, mars, tabBarStyle} = options;
+//         const {routes, componentSet, pagesInfo, window, nbjump, tabBarStyle} = options;
 //         return {
 //             visitor: {
 //                 // 处理main.js 里的 render函数参数
@@ -77,8 +77,8 @@
 //                                 : t.booleanLiteral(value)
 //                         ));
 //                     });
-//                     mars && Object.keys(mars).forEach(key => {
-//                         let value = mars[key];
+//                     nbjump && Object.keys(nbjump).forEach(key => {
+//                         let value = nbjump[key];
 //                         propsAst.push(t.objectProperty(
 //                             t.identifier(key),
 //                             typeof value === 'string'
@@ -169,7 +169,7 @@
 //                             insertImportDeclaration('basicComponents', './components.js');
 //                         }
 //                         // 注册 service worker
-//                         if (!!mars.supportPWA) {
+//                         if (!!nbjump.supportPWA) {
 //                             path.node.body.unshift(t.expressionStatement(t.callExpression(
 //                                 t.identifier('registerServiceWorker'),
 //                                 [t.stringLiteral('sw.js')]

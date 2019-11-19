@@ -81,7 +81,7 @@ list 接受一个数组，tab 按数组的顺序排序，每个项都是一个�
 
 ### 生命周期和事件方法
 
-Mars (在 Page 和 Componet 上)支持完整的 Vue 生命周期和小程序生命周期，对应的映射关系如下，建议开发者使用 Vue 生命周期来开发。
+Nbjump (在 Page 和 Componet 上)支持完整的 Vue 生命周期和小程序生命周期，对应的映射关系如下，建议开发者使用 Vue 生命周期来开发。
 
 #### App
 | 生命周期 | 小程序 | H5 |
@@ -157,22 +157,22 @@ Mars (在 Page 和 Componet 上)支持完整的 Vue 生命周期和小程序生�
 
 1、JS 逻辑适配
 
-环境判断条件：`process.env.MARS_ENV`
+环境判断条件：`process.env.NBJUMP_ENV`
 
 ::: tip
-`process.env.MARS_ENV` 会在编译时进行静态替换，所以不能当做变量使用，只能静态使用。替换后并进行 dead code elimination，不符合平台判断的代码块会在编译时移除。
+`process.env.NBJUMP_ENV` 会在编译时进行静态替换，所以不能当做变量使用，只能静态使用。替换后并进行 dead code elimination，不符合平台判断的代码块会在编译时移除。
 :::
 
 ```js
-if (process.env.MARS_ENV === 'h5') {
+if (process.env.NBJUMP_ENV === 'h5') {
     // 此代码块里的内容只渲染到h5端
     // todo ...
 }
-else if (process.env.MARS_ENV === 'swan') {
+else if (process.env.NBJUMP_ENV === 'swan') {
     // 此代码块里的内容只渲染到swan端
     // todo ...
 }
-else if (process.env.MARS_ENV === 'wx') {
+else if (process.env.NBJUMP_ENV === 'wx') {
     // 此代码块里的内容只渲染到wx端
     // todo ...
 }
@@ -180,16 +180,16 @@ else if (process.env.MARS_ENV === 'wx') {
 
 2、template 逻辑适配
 
-通过模板`<template-mars target="h5/swan/wx">`判断
+通过模板`<template-nbjump target="h5/swan/wx">`判断
 
 ```html
-<template-mars target="h5" > // 在H5端渲染为<template>
+<template-nbjump target="h5" > // 在H5端渲染为<template>
     ...
-</template-mars>
+</template-nbjump>
 
-<template-mars target="swan"> // 在swan渲染为<block>，wx同理
+<template-nbjump target="swan"> // 在swan渲染为<block>，wx同理
     ...
-</template-mars>
+</template-nbjump>
 ```
 
 3、style 逻辑适配

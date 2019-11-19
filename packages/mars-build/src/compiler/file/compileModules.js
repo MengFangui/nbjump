@@ -15,18 +15,18 @@ const {getPathToCWD, getModuleName} = require('../../helper/path');
 const path = require('path');
 
 const modules = {
-    '@marsjs/core': {
+    '@nbjump/core': {
         needCompile: false,
-        path: './mars-core/index.js'
+        path: './nbjump-core/index.js'
     },
     'vuex': {
         needCompile: true,
-        path: './mars_modules/vuex/index.js'
+        path: './nbjump_modules/vuex/index.js'
     }
 };
 
 const H5Modules = {
-    '@marsjs/core': {
+    '@nbjump/core': {
         needCompile: false,
         path: './index'
     }
@@ -43,7 +43,7 @@ function getModulePath(modulePath, modules) {
         paths: [process.cwd()]
     });
 
-    modulePath = './mars_modules' + entry.slice(entry.lastIndexOf('node_modules')).replace('node_modules', '');
+    modulePath = './nbjump_modules' + entry.slice(entry.lastIndexOf('node_modules')).replace('node_modules', '');
     return modulePath;
 }
 
@@ -60,7 +60,7 @@ function getUIModules(components, target) {
         const mod = components[key];
         if (mod[0] !== '.') {
             const name = getModuleName(mod);
-            const path = `./mars_modules/${name}/dist/${target}`;
+            const path = `./nbjump_modules/${name}/dist/${target}`;
             const realName = `${name}/dist/${target}`;
             modules[name] = {
                 path,
@@ -138,13 +138,13 @@ function compile(key, val, destPath) {
 async function compileUIModules(uiModules, destPath) {
     for (const key of Object.keys(uiModules)) {
         const {path: modPath, realName} = uiModules[key];
-        const coreEntry = require.resolve(realName + '/mars-core', {
+        const coreEntry = require.resolve(realName + '/nbjump-core', {
             paths: [process.cwd()]
         });
-        const entry = coreEntry.replace('mars-core/index.js', '');
+        const entry = coreEntry.replace('nbjump-core/index.js', '');
         const dest = path.resolve(destPath, modPath);
-        const coreDestPath = path.resolve(destPath, 'mars-core');
-        const uiCoreDestPath = path.resolve(dest, 'mars-core');
+        const coreDestPath = path.resolve(destPath, 'nbjump-core');
+        const uiCoreDestPath = path.resolve(dest, 'nbjump-core');
         const coreRelativePath = path.relative(
             uiCoreDestPath,
             coreDestPath

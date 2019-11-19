@@ -1,12 +1,12 @@
 /**
- * @file 生成入口文件components.js 注册mars-components中用户用到的组件
+ * @file 生成入口文件components.js 注册nbjump-components中用户用到的组件
  * @author zhangjingyuan02
  */
 /* eslint-disable fecs-camelcase */
 /* eslint-disable babel/new-cap */
 
 module.exports = function getVisitor(options = {}) {
-    const COMP_LIBRARY_NAME = options.devCompPath ? options.devCompPath : '@marsjs/components/lib';
+    const COMP_LIBRARY_NAME = options.devCompPath ? options.devCompPath : '@nbjump/components/lib';
 
     return ({types: t}) => {
         const componentSet = options.componentSet;
@@ -30,7 +30,7 @@ module.exports = function getVisitor(options = {}) {
                         for (let key in componentSet) {
                             insertImportDeclaration(
                                 componentSet[key],
-                                `${COMP_LIBRARY_NAME}/${componentSet[key].replace('Mars', '')}`
+                                `${COMP_LIBRARY_NAME}/${componentSet[key].replace('Nbjump', '')}`
                             );
                             componentExpression.push(t.expressionStatement(t.callExpression(
                                 t.memberExpression(

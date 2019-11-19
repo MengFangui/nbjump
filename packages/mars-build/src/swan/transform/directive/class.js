@@ -1,6 +1,6 @@
 /**
  * @file transform class
- * @author mars
+ * @author nbjump
  *
  * TODO 改成用 babel 实现
  * eg

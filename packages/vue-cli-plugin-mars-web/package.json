@@ -1,7 +1,7 @@
 {
-    "name": "@marsjs/vue-cli-plugin-mars-web",
+    "name": "@nbjump/vue-cli-plugin-nbjump-web",
     "version": "0.0.9",
-    "description": "vue cli plugin mars web",
+    "description": "vue cli plugin nbjump web",
     "main": "index.js",
     "dependencies": {
         "@vue/cli-shared-utils": "^3.1.1",

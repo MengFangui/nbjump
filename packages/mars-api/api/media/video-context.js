@@ -6,7 +6,7 @@
 class VideoContext {
     constructor(id) {
         this.video = document.querySelector('#' + id + ' video');
-        this.poster = document.querySelector('[class*=mars-video-poster]');
+        this.poster = document.querySelector('[class*=nbjump-video-poster]');
     }
 
     play() {

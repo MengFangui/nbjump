@@ -128,7 +128,7 @@ function wrapFiles(ret, options) {
     });
 
     const stylesArr = styles.filter(item => !item.attrs
-        || (!item.attrs.target || item.attrs.target === (process.env.MARS_ENV_TARGET || target))
+        || (!item.attrs.target || item.attrs.target === (process.env.NBJUMP_ENV_TARGET || target))
     );
     const styleContent = stylesArr.reduce((stylestr, {content}) => `${stylestr}
 ${content}
@@ -191,7 +191,7 @@ exports.parse = function parse(file, options, withWrap = true) {
                 configBlocks.default.push(block);
             }
 
-            if (block.attrs.target === (process.env.MARS_ENV_TARGET || target)) {
+            if (block.attrs.target === (process.env.NBJUMP_ENV_TARGET || target)) {
                 configBlocks.target.push(block);
             }
         }

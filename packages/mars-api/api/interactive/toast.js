@@ -37,8 +37,8 @@ const loadingStyle = {
     backgroundRepeat: 'no-repeat',
     backgroundSize: '44px 44px',
     backgroundPosition: 'center center',
-    animation: 'marsCustomLoadingAnimation 1s steps(12, end) infinite',
-    webkitAnimation: 'marsCustomLoadingAnimation 1s steps(12, end) infinite'
+    animation: 'nbjumpCustomLoadingAnimation 1s steps(12, end) infinite',
+    webkitAnimation: 'nbjumpCustomLoadingAnimation 1s steps(12, end) infinite'
 };
 const successStyle = {
     backgroundColor: 'transparent',
@@ -90,13 +90,13 @@ function create(option) {
     const {title, icon, image, mask, duration} = option;
 
     let toastMask = document.createElement('div');
-    toastMask.id = 'mars-custom-toast-mask';
+    toastMask.id = 'nbjump-custom-toast-mask';
     Object.keys(toastMaskStyle).forEach(key => {
         toastMask.style[key] = toastMaskStyle[key];
     });
 
     let toastWrapper = document.createElement('div');
-    toastWrapper.id = 'mars-custom-toast';
+    toastWrapper.id = 'nbjump-custom-toast';
     Object.keys(toastWrapperStyle).forEach(key => {
         toastWrapper.style[key] = toastWrapperStyle[key];
     });
@@ -145,10 +145,10 @@ function create(option) {
 }
 
 function remove() {
-    const marsToast = document.getElementById('mars-custom-toast');
-    const marsToastMask = document.getElementById('mars-custom-toast-mask');
-    marsToast && marsToast.parentNode.removeChild(marsToast);
-    marsToastMask && marsToastMask.parentNode.removeChild(marsToastMask);
+    const nbjumpToast = document.getElementById('nbjump-custom-toast');
+    const nbjumpToastMask = document.getElementById('nbjump-custom-toast-mask');
+    nbjumpToast && nbjumpToast.parentNode.removeChild(nbjumpToast);
+    nbjumpToastMask && nbjumpToastMask.parentNode.removeChild(nbjumpToastMask);
 }
 
 /* eslint-disable fecs-export-on-declare */

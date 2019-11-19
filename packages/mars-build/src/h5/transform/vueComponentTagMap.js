@@ -2,7 +2,7 @@
  * @file build
  * @author zhangjingyuan02
  */
-const prefixComp = 'mars-';
+const prefixComp = 'nbjump-';
 module.exports = {
     // 视图容器
     'view': `${prefixComp}view`,

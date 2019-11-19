@@ -1,5 +1,5 @@
 /**
- * @file mars-cli-template generator
+ * @file nbjump-cli-template generator
  * @author meixuguang
  */
 
@@ -25,23 +25,23 @@ module.exports = async (api, options) => {
 
         // 添加 h5 所需的依赖
         api.extendPackage({
-            // call mars-cli-service directly not work
+            // call nbjump-cli-service directly not work
             // for some ENV requirements
             // scripts: {
-            //     'serve-dist-h5': 'mars-cli-service serve',
-            //     'build-dist-h5': 'mars-cli-service build'
+            //     'serve-dist-h5': 'nbjump-cli-service serve',
+            //     'build-dist-h5': 'nbjump-cli-service build'
             // },
             dependencies: {
                 'vue': '^2.6.6',
                 'vue-router': '^3.0.1',
-                '@marsjs/components': '^1.0.0',
-                '@marsjs/api': '^1.0.0'
+                '@nbjump/components': '^1.0.0',
+                '@nbjump/api': '^1.0.0'
             },
             devDependencies: {
                 'atom-web-compiler': '^2.2.0',
                 'atom2vue-loader': '^1.0.0',
-                '@marsjs/vue-cli-plugin-mars-web': '^0.0.9',
-                // '@marsjs/vue-cli-plugin-pwa': '^0.0.1',
+                '@nbjump/vue-cli-plugin-nbjump-web': '^0.0.9',
+                // '@nbjump/vue-cli-plugin-pwa': '^0.0.1',
                 '@vue/cli-plugin-babel': '^3.0.0',
                 '@vue/cli-service': '^3.5.0',
                 'less': '^3.0.4',
@@ -52,26 +52,26 @@ module.exports = async (api, options) => {
 
         needPWA && api.extendPackage({
             devDependencies: {
-                '@marsjs/vue-cli-plugin-pwa': '^0.0.1'
+                '@nbjump/vue-cli-plugin-pwa': '^0.0.1'
             }
         });
     }
 
     api.extendPackage({
         scripts: {
-            'serve': 'mars serve',
-            'build': 'mars build',
-            // 'build:swan': 'mars build',
-            // 'serve:swan': 'mars serve',
-            'build:h5': 'mars build -t h5',
-            'serve:h5': 'mars serve -t h5',
-            'build:wx': 'mars build -t wx',
-            'serve:wx': 'mars serve -t wx'
+            'serve': 'nbjump serve',
+            'build': 'nbjump build',
+            // 'build:swan': 'nbjump build',
+            // 'serve:swan': 'nbjump serve',
+            'build:h5': 'nbjump build -t h5',
+            'serve:h5': 'nbjump serve -t h5',
+            'build:wx': 'nbjump build -t wx',
+            'serve:wx': 'nbjump serve -t wx'
         },
         devDependencies: {
             '@vue/cli': '^3.3.0',
-            '@marsjs/build': '^0.3.0',
-            '@marsjs/core': '^0.3.0'
+            '@nbjump/build': '^0.3.0',
+            '@nbjump/core': '^0.3.0'
         }
     });
 

@@ -28,8 +28,8 @@ const loadingStyle = {
     backgroundRepeat: 'no-repeat',
     backgroundSize: '20px 20px',
     backgroundPosition: 'center center',
-    animation: 'marsCustomLoadingAnimation 1s steps(12, end) infinite',
-    webkitAnimation: 'marsCustomLoadingAnimation 1s steps(12, end) infinite'
+    animation: 'nbjumpCustomLoadingAnimation 1s steps(12, end) infinite',
+    webkitAnimation: 'nbjumpCustomLoadingAnimation 1s steps(12, end) infinite'
 };
 /* eslint-enable max-len */
 
@@ -75,13 +75,13 @@ function create(option) {
     const {title, mask} = option;
 
     const loadingMask = document.createElement('div');
-    loadingMask.id = 'mars-custom-loading-mask';
+    loadingMask.id = 'nbjump-custom-loading-mask';
     Object.keys(loadingMaskStyle).forEach(key => {
         loadingMask.style[key] = loadingMaskStyle[key];
     });
 
     const loadingWrapper = document.createElement('div');
-    loadingWrapper.id = 'mars-custom-loading';
+    loadingWrapper.id = 'nbjump-custom-loading';
     Object.keys(loadingWrapperStyle).forEach(key => {
         loadingWrapper.style[key] = loadingWrapperStyle[key];
     });
@@ -112,10 +112,10 @@ function create(option) {
 }
 
 function remove() {
-    const marsLoading = document.getElementById('mars-custom-loading');
-    const marsLoadingMask = document.getElementById('mars-custom-loading-mask');
-    marsLoading && marsLoading.parentNode.removeChild(marsLoading);
-    marsLoadingMask && marsLoadingMask.parentNode.removeChild(marsLoadingMask);
+    const nbjumpLoading = document.getElementById('nbjump-custom-loading');
+    const nbjumpLoadingMask = document.getElementById('nbjump-custom-loading-mask');
+    nbjumpLoading && nbjumpLoading.parentNode.removeChild(nbjumpLoading);
+    nbjumpLoadingMask && nbjumpLoadingMask.parentNode.removeChild(nbjumpLoadingMask);
 }
 
 /* eslint-disable fecs-export-on-declare */

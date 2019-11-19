@@ -1,5 +1,5 @@
 {
-    "name": "@marsjs/core",
+    "name": "@nbjump/core",
     "version": "0.3.6",
     "scripts": {
         "test": "jest --coverage"

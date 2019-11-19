@@ -23,7 +23,7 @@ async function info(options = {}) {
         npmPackages,
         npmGlobalPackages: ['typescript']
     }, options), {
-        title: `Mars CLI ${getCliVersion()} environment info`
+        title: `Nbjump CLI ${getCliVersion()} environment info`
     });
     console.log(
         info

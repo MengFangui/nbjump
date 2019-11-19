@@ -36,11 +36,11 @@ const args = require('minimist')(rawArgv, {
 });
 const command = args._[0];
 const context = path.resolve(process.cwd(), args.path);
-// const dest = process.env.MARS_CLI_DEST || './path-h5';
+// const dest = process.env.NBJUMP_CLI_DEST || './path-h5';
 // const context = path.resolve(process.cwd(), dest);
-// default MARS_CLI_OPTIONS when run mars-cli-service directly
-// process.env.MARS_CLI_TARGET = process.env.MARS_CLI_TARGET || 'h5';
-// process.env.MARS_CLI_OPTIONS = process.env.MARS_CLI_OPTIONS || JSON.stringify({
+// default NBJUMP_CLI_OPTIONS when run nbjump-cli-service directly
+// process.env.NBJUMP_CLI_TARGET = process.env.NBJUMP_CLI_TARGET || 'h5';
+// process.env.NBJUMP_CLI_OPTIONS = process.env.NBJUMP_CLI_OPTIONS || JSON.stringify({
 //     target: 'h5'
 // });
 
@@ -75,7 +75,7 @@ const context = path.resolve(process.cwd(), args.path);
     }
 
     if (!process.env.VUE_CLI_SERVICE_CONFIG_PATH) {
-        const env = process.env.MARS_CLI_ENV;
+        const env = process.env.NBJUMP_CLI_ENV;
         const envConfigPath = env && `${process.cwd()}/vue.config.${env}.js`;
         const configPath = envConfigPath && fs.existsSync(envConfigPath)
                             ? envConfigPath
@@ -85,17 +85,17 @@ const context = path.resolve(process.cwd(), args.path);
     // await fs.copy(process.cwd() + '/vue.config.js', context + '/vue.config.js');
     let pwaSupport = false;
     try {
-        pwaSupport = JSON.parse(process.env.MARS_PWA);
+        pwaSupport = JSON.parse(process.env.NBJUMP_PWA);
     }
     catch (e) {}
     const plugins = pwaSupport
         ? [
-            idToPlugin('@marsjs/vue-cli-plugin-mars-web'),
+            idToPlugin('@nbjump/vue-cli-plugin-nbjump-web'),
             idToPlugin('@vue/cli-plugin-babel'),
-            idToPlugin('@marsjs/vue-cli-plugin-pwa')
+            idToPlugin('@nbjump/vue-cli-plugin-pwa')
         ]
         : [
-            idToPlugin('@marsjs/vue-cli-plugin-mars-web'),
+            idToPlugin('@nbjump/vue-cli-plugin-nbjump-web'),
             idToPlugin('@vue/cli-plugin-babel')
         ];
     const service = new Service(context, {

@@ -18,7 +18,7 @@ const fs = require('fs-extra');
 /**
  * compile
  *
- * @param {mars.runtime.runtimeGulpPluginOptions} options options
+ * @param {nbjump.runtime.runtimeGulpPluginOptions} options options
  * @return {Promise}
  */
 function compile(options) {
@@ -27,18 +27,18 @@ function compile(options) {
     let entry;
     const coreDestDir = path.resolve(process.cwd(), destPath + '/' + dest.coreDir);
     if (target === 'wx') {
-        entry = require.resolve('@marsjs/core/src/wx', {
+        entry = require.resolve('@nbjump/core/src/wx', {
             paths: [process.cwd()]
         });
     }
     else if (target === 'swan') {
-        entry = require.resolve('@marsjs/core/src/swan', {
+        entry = require.resolve('@nbjump/core/src/swan', {
             paths: [process.cwd()]
         });
     }
     else if (target === 'h5') {
         // h5 runtime just copy it
-        entry = require.resolve('@marsjs/core/src/h5', {
+        entry = require.resolve('@nbjump/core/src/h5', {
             paths: [process.cwd()]
         });
         const entryDir = path.dirname(entry);
@@ -64,7 +64,7 @@ function compile(options) {
             mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
             plugins: [
                 new webpack.DefinePlugin({
-                    'process.env.MARS_CONFIG_FRAMEWORK': framework
+                    'process.env.NBJUMP_CONFIG_FRAMEWORK': framework
                 })
             ]
         }, (err, stats) => {
@@ -98,7 +98,7 @@ function compile(options) {
     //     /process\.env\.NODE_ENV/g,
     //     JSON.stringify(process.env.NODE_ENV || 'development')
     // ).replace(
-    //     /process\.env\.MARS_CONFIG_FRAMEWORK/g,
+    //     /process\.env\.NBJUMP_CONFIG_FRAMEWORK/g,
     //     options.framework
     // );
     // const ret = transform(source, {
@@ -114,7 +114,7 @@ function compile(options) {
 /**
  * 用于编译 runtime 的 gulp 插件
  *
- * @param {mars.runtime.runtimeGulpPluginOptions} options options
+ * @param {nbjump.runtime.runtimeGulpPluginOptions} options options
  * @return {any}
  */
 function gulpPlugin(options) {

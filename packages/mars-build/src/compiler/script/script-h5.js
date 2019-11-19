@@ -18,7 +18,7 @@ const transformCompPlugin = require('../../h5/transform/plugins/transformCompPlu
 // const transformGetAppPlugin = require('../../h5/transform/plugins/transformGetAppPlugin');
 // const postTransformScriptPlugin = require('./babel-plugin-script-post');
 
-const MARS_ENV = process.env.MARS_ENV_TARGET || 'h5';
+const NBJUMP_ENV = process.env.NBJUMP_ENV_TARGET || 'h5';
 const path = require('path');
 const compileModules = require('../file/compileModules');
 const {resolveComponentsPath, getUIModules} = compileModules;
@@ -33,17 +33,17 @@ exports.compileScript = async function (content, options = {}) {
         mpConfig,
         target,
         dest,
-        mars
+        nbjump
     } = options;
     let baseOptions = {}; // 收集 config 和 components
     content = content.replace(
-        /process\.env\.MARS_ENV/g,
-        JSON.stringify(MARS_ENV)
+        /process\.env\.NBJUMP_ENV/g,
+        JSON.stringify(NBJUMP_ENV)
     ).replace(
         /process\.env\.NODE_ENV/g,
         JSON.stringify(process.env.NODE_ENV || 'development')
     );
-    const useAOP = mars.useAOP === undefined ? true : mars.useAOP;
+    const useAOP = nbjump.useAOP === undefined ? true : nbjump.useAOP;
     let scriptAST = transformSync(content, {
         ast: true,
         code: false,
@@ -120,7 +120,7 @@ exports.compileComponents = function (file, options) {
     let componentSet = file._info_.componentSet;
     // 注册App.vue 里的 回到主页
     Object.assign(componentSet, {
-        'mars-navigator': 'MarsNavigator'
+        'nbjump-navigator': 'NbjumpNavigator'
     });
     const devCompPath = options.devCompPath;
     file.contents = Buffer.from('export default basicComponents;');
@@ -137,7 +137,7 @@ exports.compileComponents = function (file, options) {
 };
 
 // exports.compileRouter = function (content, options) {
-//     const {config = {}, mars} = options;
+//     const {config = {}, nbjump} = options;
 //     const {
 //         pages = [],
 //         subPackages = []
@@ -159,14 +159,14 @@ exports.compileComponents = function (file, options) {
 //         });
 //     }
 
-//     // 判断当前MARS_ENV模式下是否有对应的页面数组
+//     // 判断当前NBJUMP_ENV模式下是否有对应的页面数组
 //     let envPages = [];
-//     if (config && config['pages-' + MARS_ENV]) {
-//         envPages = config['pages-' + MARS_ENV];
+//     if (config && config['pages-' + NBJUMP_ENV]) {
+//         envPages = config['pages-' + NBJUMP_ENV];
 //     }
 //     const routes = pages.concat(subPages, envPages);
 
-//     const mode = mars && mars.mode ? mars.mode : 'history';
+//     const mode = nbjump && nbjump.mode ? nbjump.mode : 'history';
 //     const routerStr = transformSync(content.toString(), {
 //         plugins: [transformRouterPlugin({
 //             routes,
@@ -183,7 +183,7 @@ exports.compileComponents = function (file, options) {
 // exports.compileMain = function (content, options) {
 //     let {
 //         mainOptions,
-//         mars,
+//         nbjump,
 //         componentSet // componentSet 决定了main文件是否引入components
 //     } = options;
 //     let {
@@ -210,14 +210,14 @@ exports.compileComponents = function (file, options) {
 //             routes: list,
 //             tabBarStyle,
 //             window,
-//             mars: {
-//                 navigationBarHomeColor: mars.navigationBarHomeColor === undefined
+//             nbjump: {
+//                 navigationBarHomeColor: nbjump.navigationBarHomeColor === undefined
 //                     ? 'dark'
-//                     : mars.navigationBarHomeColor,
-//                 showNavigationBorder: !!mars.showNavigationBorder,
-//                 useTransition: mars.useTransition === undefined ? true : mars.useTransition,
+//                     : nbjump.navigationBarHomeColor,
+//                 showNavigationBorder: !!nbjump.showNavigationBorder,
+//                 useTransition: nbjump.useTransition === undefined ? true : nbjump.useTransition,
 //                 homePage: `/${list.length > 0 ? list[0].pagePath : pages[0]}`,
-//                 supportPWA: !!mars.supportPWA
+//                 supportPWA: !!nbjump.supportPWA
 //             },
 //             componentSet,
 //             pagesInfo
@@ -272,10 +272,10 @@ exports.compileComponents = function (file, options) {
 // };
 
 // exports.compileApi = function (content, options) {
-//     let apiLibrary = options.devApiPath ? options.devApiPath : '@marsjs/api';
+//     let apiLibrary = options.devApiPath ? options.devApiPath : '@nbjump/api';
 //     let contentStr = content.toString();
 //     contentStr = `
-// import Mars, {directives} from '${apiLibrary}';
+// import Nbjump, {directives} from '${apiLibrary}';
 // ${contentStr}
 //     `;
 //     content = Buffer.from(contentStr);

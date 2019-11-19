@@ -1,6 +1,6 @@
 /**
  * @file unsupport
- * @author mars
+ * @author nbjump
  */
 
 import {callback} from '../../lib/utils';

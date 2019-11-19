@@ -3,7 +3,7 @@
  * @author meixuguang
  */
 
-namespace mars.runtime {
+namespace nbjump.runtime {
     interface runtimeGulpPluginOptions {
         framework: any;
         target: string;
@@ -11,7 +11,7 @@ namespace mars.runtime {
     }
 }
 
-namespace mars.script {
+namespace nbjump.script {
     interface compileScriptResult {
         code: string;
         config: any;

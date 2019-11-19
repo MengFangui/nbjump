@@ -25,7 +25,7 @@ const compileModules = require('./compileModules');
  * 编译 JS
  *
  * @param {string} content 文件内容
- * @param {mars.options} options opt
+ * @param {nbjump.options} options opt
  * @return {babel.BabelFileResult}
  */
 async function compileJS(content, options) {
@@ -36,8 +36,8 @@ async function compileJS(content, options) {
     const buildConfig = options._config;
 
     content = content.replace(
-        /process\.env\.MARS_ENV/g,
-        JSON.stringify(process.env.MARS_ENV_TARGET || target)
+        /process\.env\.NBJUMP_ENV/g,
+        JSON.stringify(process.env.NBJUMP_ENV_TARGET || target)
     ).replace(
         /process\.env\.NODE_ENV/g,
         JSON.stringify(process.env.NODE_ENV || 'development')
@@ -55,7 +55,7 @@ async function compileJS(content, options) {
                     rPath,
                     modules,
                     usedModules,
-                    compileNPM: process.env.MARS_ENV_TARGET === 'wx'
+                    compileNPM: process.env.NBJUMP_ENV_TARGET === 'wx'
                 }
             ],
             'minify-guarded-expressions',

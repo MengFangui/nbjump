@@ -20,8 +20,8 @@ const {resolveComponentsPath, getUIModules, modules} = compileModules;
  * compile script
  *
  * @param {string} source source
- * @param {mars.options} options options
- * @return {mars.script.compileScriptResult}
+ * @param {nbjump.options} options options
+ * @return {nbjump.script.compileScriptResult}
  */
 async function compile(source, options) {
     const {
@@ -35,7 +35,7 @@ async function compile(source, options) {
 
     let ret = {};
     source = source.replace(
-        /process\.env\.MARS_ENV/g,
+        /process\.env\.NBJUMP_ENV/g,
         JSON.stringify(target)
     ).replace(
         /process\.env\.NODE_ENV/g,
@@ -76,7 +76,7 @@ async function compile(source, options) {
                     rPath,
                     modules: Object.assign({}, modules, uiModules),
                     usedModules,
-                    compileNPM: process.env.MARS_ENV_TARGET === 'wx'
+                    compileNPM: process.env.NBJUMP_ENV_TARGET === 'wx'
                 }
             ],
             'minify-guarded-expressions',
@@ -105,8 +105,8 @@ async function compile(source, options) {
  * postcompile script
  *
  * @param {string} source source
- * @param {mars.options} options options
- * @return {mars.script.compileScriptResult}
+ * @param {nbjump.options} options options
+ * @return {nbjump.script.compileScriptResult}
  */
 async function postCompile(source, options) {
     const {componentsInUsed} = options;

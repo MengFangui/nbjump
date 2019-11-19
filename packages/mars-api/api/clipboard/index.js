@@ -9,7 +9,7 @@ import {showToast} from '../interactive';
 class FakeClipboard {
     constructor() {
         this.textArea = document.createElement('textarea');
-        this.textArea.id = 'mars-clipboard';
+        this.textArea.id = 'nbjump-clipboard';
         this.textArea.style.position = 'absolute';
         this.textArea.style.left = '-9999px';
         this.textArea.setAttribute('readonly', 'readonly');

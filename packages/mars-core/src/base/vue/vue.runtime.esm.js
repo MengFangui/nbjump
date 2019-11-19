@@ -4,7 +4,7 @@
  * (c) 2014-2019 Evan You
  * Released under the MIT License.
  */
-// This file is a copy of: https://github.com/max-team/mars-vue/blob/v2_5_21_fork/dist/vue.runtime.esm.js
+// This file is a copy of: https://github.com/max-team/nbjump-vue/blob/v2_5_21_fork/dist/vue.runtime.esm.js
 
 /*  */
 
@@ -2203,7 +2203,7 @@ function updateVMProps(vm, propsData) {
 
 }
 
-// for @marsjs/core used for update Child Props
+// for @nbjump/core used for update Child Props
 function updateChildProps() {
   var this$1 = this;
 

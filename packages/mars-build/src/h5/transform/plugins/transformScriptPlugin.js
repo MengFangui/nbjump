@@ -75,16 +75,16 @@ const APP_PAOGE_LIFE_MAP_VUE = {
 // MAP: AOP 注册的生命周期方法的映射
 const AOP_MAP = {
     App: {
-        onLaunch: 'marsAppAfterCreated',
-        onShow: 'marsAppAfterMounted',
-        onHide: 'marsAppAfterDestroyed'
+        onLaunch: 'nbjumpAppAfterCreated',
+        onShow: 'nbjumpAppAfterMounted',
+        onHide: 'nbjumpAppAfterDestroyed'
     },
     Page: {
-        onLoad: 'marsPageAfterCreated',
-        onReady: 'marsPageAfterMounted',
-        onUnload: 'marsPageAfterDestroyed',
-        onShow: 'marsPageAfterActivated',
-        onHide: 'marsPageAfterDeactivated'
+        onLoad: 'nbjumpPageAfterCreated',
+        onReady: 'nbjumpPageAfterMounted',
+        onUnload: 'nbjumpPageAfterDestroyed',
+        onShow: 'nbjumpPageAfterActivated',
+        onHide: 'nbjumpPageAfterDeactivated'
     }
 };
 

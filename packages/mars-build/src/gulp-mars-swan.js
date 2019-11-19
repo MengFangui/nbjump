@@ -8,7 +8,7 @@
 /* eslint-disable no-native-reassign */
 
 /* eslint-disable fecs-min-vars-per-destructure */
-const {gulpPlugin} = require('./gulp-mars-base');
+const {gulpPlugin} = require('./gulp-nbjump-base');
 const {
     getCompiler,
     generate,

@@ -22,8 +22,8 @@ const log = require('../helper/log');
 /**
  * getBuildTasks
  *
- * @param {mars.config} config config
- * @param {mars.options} options options
+ * @param {nbjump.config} config config
+ * @param {nbjump.options} options options
  * @return {string[]}
  */
 function getBuildTasks(config = {}, options = {}) {
@@ -71,7 +71,7 @@ function clean(options = {}) {
 /**
  * build
  *
- * @param {mars.buildOptions} options options
+ * @param {nbjump.buildOptions} options options
  * @return {Object}
  */
 function build(options = {}) {

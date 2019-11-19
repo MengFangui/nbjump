@@ -15,11 +15,11 @@ npm run bootstrap
 ```
 docs                // 文档目录
 packsges
-    |- mars-build   // 编译相关代码
-    |- mars-core    // 运行时代码
-    |- mars-cli     // CLI 代码
-    |- mars-cli-template  // CLI Service 代码
-    |- mars-api     // 适配 H5 的 API 代码
+    |- nbjump-build   // 编译相关代码
+    |- nbjump-core    // 运行时代码
+    |- nbjump-cli     // CLI 代码
+    |- nbjump-cli-template  // CLI Service 代码
+    |- nbjump-api     // 适配 H5 的 API 代码
 ```
 
 ### 单元测试

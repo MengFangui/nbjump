@@ -25,8 +25,8 @@ let h5Configs = {
 /**
  * getTaskSFC
  *
- * @param {mars.config} config config
- * @param {mars.options} options options
+ * @param {nbjump.config} config config
+ * @param {nbjump.options} options options
  * @return {Function}
  */
 function getTaskSFC(config, options) {
@@ -46,15 +46,15 @@ function getTaskSFC(config, options) {
 
     let compile;
     if (target === 'swan') {
-        compile = require('../gulp-mars-swan');
+        compile = require('../gulp-nbjump-swan');
     }
 
     if (target === 'wx') {
-        compile = require('../gulp-mars-wxml');
+        compile = require('../gulp-nbjump-wxml');
     }
 
     if (target === 'h5') {
-        compile = require('../gulp-mars-h5');
+        compile = require('../gulp-nbjump-h5');
         compileOption.commit = (type, key, val) => {
             h5Configs[type][key] = val;
         };
@@ -91,8 +91,8 @@ function getTaskSFC(config, options) {
 /**
  * getTaskCompileAssets
  *
- * @param {mars.config} config config
- * @param {mars.options} options options
+ * @param {nbjump.config} config config
+ * @param {nbjump.options} options options
  * @return {Function}
  */
 function getTaskCompileAssets(config, options) {
@@ -128,8 +128,8 @@ function getTaskCompileAssets(config, options) {
 /**
  * getTaskRuntime
  *
- * @param {mars.config} config config
- * @param {mars.options} options options
+ * @param {nbjump.config} config config
+ * @param {nbjump.options} options options
  * @return {Function}
  */
 function getTaskRuntime(config, options) {
@@ -158,8 +158,8 @@ function getTaskRuntime(config, options) {
 /**
  * getTaskClean
  *
- * @param {mars.config} config config
- * @param {mars.options} options options
+ * @param {nbjump.config} config config
+ * @param {nbjump.options} options options
  * @return {Function}
  */
 function getTaskClean(config, options) {
@@ -178,8 +178,8 @@ function getTaskClean(config, options) {
 /**
  * getTaskWatch
  *
- * @param {mars.config} config config
- * @param {mars.options} options options
+ * @param {nbjump.config} config config
+ * @param {nbjump.options} options options
  * @return {Function}
  */
 function getTaskWatch(config, options) {
@@ -192,8 +192,8 @@ function getTaskWatch(config, options) {
 /**
  * getTasks
  *
- * @param {mars.config} config config
- * @param {mars.options} options options
+ * @param {nbjump.config} config config
+ * @param {nbjump.options} options options
  * @return {void}
  */
 function getTasks(config, options) {

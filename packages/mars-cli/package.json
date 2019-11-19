@@ -1,8 +1,8 @@
 {
-  "name": "@marsjs/cli",
+  "name": "@nbjump/cli",
   "version": "0.3.7",
   "bin": {
-    "mars": "./bin/mars.js"
+    "nbjump": "./bin/nbjump.js"
   },
   "dependencies": {
     "@vue/cli": "^3.5.1",

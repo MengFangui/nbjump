@@ -1,8 +1,8 @@
 # 编译配置
 
-项目根目录下的 `mars.config.js` 为编译配置文件。
+项目根目录下的 `nbjump.config.js` 为编译配置文件。
 
-框架预置的默认配置如下，在 `mars.config.js` 中的配置会与默认配置进行深度 merge (默认配置中同名的配置项会被自定义配置覆盖，包括数组，数组不会进行 concat，如需要请自行处理)。
+框架预置的默认配置如下，在 `nbjump.config.js` 中的配置会与默认配置进行深度 merge (默认配置中同名的配置项会被自定义配置覆盖，包括数组，数组不会进行 concat，如需要请自行处理)。
 
 自定义配置导出类型如下：
 
@@ -14,7 +14,7 @@ Type：`(target: string) => Object`
 小程序配置文件列表，每次编译时时不会从 `dest` 删除。
 
 ### `appConfig`
-Since：`@marsjs/build@0.3.8`
+Since：`@nbjump/build@0.3.8`
 
 Type: `{config: Object appJsonConfig}`
 

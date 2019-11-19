@@ -59,7 +59,7 @@
 //                     ]));
 //                     // 生成 routes
 //                     path.node.arguments[0].properties[1].value.elements = routesArr;
-//                     // 根据app.vue 里的 mars.mode 配置 前端路由模式
+//                     // 根据app.vue 里的 nbjump.mode 配置 前端路由模式
 //                     path.node.arguments[0].properties[0].key.name === 'mode'
 //                         && (path.node.arguments[0].properties[0].value = t.stringLiteral(mode));
 //                 },

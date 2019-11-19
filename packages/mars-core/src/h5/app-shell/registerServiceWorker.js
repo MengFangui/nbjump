@@ -1,6 +1,6 @@
 /**
  * @file 注册service worker
- * @author mars
+ * @author nbjump
  */
 
 function register(file) {

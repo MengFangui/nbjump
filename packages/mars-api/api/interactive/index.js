@@ -25,7 +25,7 @@ function judgeOptionType(opt, apiName) {
 function createAnimationStyle() {
     const toastLoadingStyle = document.createElement('style');
     toastLoadingStyle.textContent = `
-    @-webkit-keyframes marsCustomLoadingAnimation {
+    @-webkit-keyframes nbjumpCustomLoadingAnimation {
         0% {
             -webkit-transform: rotate3d(0, 0, 1, 0deg);
         }
@@ -34,7 +34,7 @@ function createAnimationStyle() {
             transform: rotate3d(0, 0, 1, 360deg);
         }
     }
-    @keyframes marsCustomLoadingAnimation {
+    @keyframes nbjumpCustomLoadingAnimation {
         0% {
             -webkit-transform: rotate3d(0, 0, 1, 0deg);
         }
@@ -43,7 +43,7 @@ function createAnimationStyle() {
             transform: rotate3d(0, 0, 1, 360deg);
         }
     }
-    @keyframes marsCustomZoominAnimation {
+    @keyframes nbjumpCustomZoominAnimation {
         0% {
             transform:scale(0.7, 0.7);
             opacity: 0.7;
@@ -53,7 +53,7 @@ function createAnimationStyle() {
             opacity: 1;
         }
     }
-    @-webkit-keyframes marsCustomZoominAnimation {
+    @-webkit-keyframes nbjumpCustomZoominAnimation {
         0% {
             -webkit-transform: scale(0.7, 0.7);
             opacity: 0.7;
@@ -63,7 +63,7 @@ function createAnimationStyle() {
             opacity: 1;
         }
     }
-    @keyframes marsCustomShowMaskAnimation {
+    @keyframes nbjumpCustomShowMaskAnimation {
         0% {
             opacity: 0.7;
         }
@@ -71,7 +71,7 @@ function createAnimationStyle() {
             opacity: 1;
         }
     }
-    @-webkit-keyframes marsCustomShowMaskAnimation {
+    @-webkit-keyframes nbjumpCustomShowMaskAnimation {
         0% {
             opacity: 0.7;
         }

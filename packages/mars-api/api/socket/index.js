@@ -89,8 +89,8 @@ class SocketTask {
     }
 }
 
-/* global MarsSocket */
-const MarsSocket = [];
+/* global NbjumpSocket */
+const NbjumpSocket = [];
 
 export function connectSocket(options) {
     const {
@@ -109,7 +109,7 @@ export function connectSocket(options) {
         try {
             const websocket = new WebSocket(url, protocols);
             socketTask = new SocketTask(websocket);
-            MarsSocket.push(websocket);
+            NbjumpSocket.push(websocket);
         } catch (e) {
             err = e;
         }
@@ -127,13 +127,13 @@ export function connectSocket(options) {
 }
 
 export function onSocketOpen(cb) {
-    // MarsSocket[0].addEventListener('open', event => cb(event) });
-    MarsSocket[0].onopen = cb;
+    // NbjumpSocket[0].addEventListener('open', event => cb(event) });
+    NbjumpSocket[0].onopen = cb;
 }
 
 export function onSocketError(cb) {
-    // MarsSocket[0].addEventListener('error', event => cb(event) });
-    MarsSocket[0].onerror = cb;
+    // NbjumpSocket[0].addEventListener('error', event => cb(event) });
+    NbjumpSocket[0].onerror = cb;
 }
 
 export function sendSocketMessage(options) {
@@ -147,7 +147,7 @@ export function sendSocketMessage(options) {
     let err = null;
 
     try {
-        MarsSocket[0].send(data);
+        NbjumpSocket[0].send(data);
     } catch (e) {
         err = e;
     }
@@ -164,7 +164,7 @@ export function sendSocketMessage(options) {
 }
 
 export function onSocketMessage(cb) {
-    MarsSocket[0].onmessage = cb;
+    NbjumpSocket[0].onmessage = cb;
 }
 
 export function closeSocket(options) {
@@ -178,7 +178,7 @@ export function closeSocket(options) {
 
     let err = null;
     try {
-        MarsSocket[0].close(code, reason);
+        NbjumpSocket[0].close(code, reason);
     } catch (e) {
         err = e;
     }
@@ -195,5 +195,5 @@ export function closeSocket(options) {
 }
 
 export function onSocketClose(cb) {
-    MarsSocket[0].onclose = cb;
+    NbjumpSocket[0].onclose = cb;
 }

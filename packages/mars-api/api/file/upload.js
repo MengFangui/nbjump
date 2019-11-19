@@ -8,8 +8,8 @@ import {callback, isIOS} from '../../lib/utils';
 
 export function uploader(type = 'image', count = 1, sourceType) {
     return new Promise((resolve, reject) => {
-        const input = document.getElementById('mars-uploader') || document.createElement('input');
-        input.id = 'mars-uploader';
+        const input = document.getElementById('nbjump-uploader') || document.createElement('input');
+        input.id = 'nbjump-uploader';
         input.type = 'file';
         input.multiple = count > 1;
         input.accept = type + '/*';

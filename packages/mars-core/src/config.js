@@ -9,5 +9,5 @@ export default {
         events: false,
         lifetimes: false
     },
-    framework: process.env.MARS_CONFIG_FRAMEWORK
+    framework: process.env.NBJUMP_CONFIG_FRAMEWORK
 };

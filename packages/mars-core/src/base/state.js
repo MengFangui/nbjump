@@ -1,5 +1,5 @@
 /**
- * @file mars global state
+ * @file nbjump global state
  * @author meixuguang
  */
 

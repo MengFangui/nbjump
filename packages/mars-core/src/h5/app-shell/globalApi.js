@@ -1,9 +1,9 @@
 /**
  * @file global api
- * @author mars
+ * @author nbjump
  */
 
-import {Mars, directives} from './export';
+import {Nbjump, directives} from './export';
 
 /**
  * 判断变量是否为对象
@@ -145,11 +145,11 @@ function initDirectives(Vue, directives = {}) {
 function initGlobalApi(Vue, vm) {
     /* globals directives */
     initDirectives(Vue, directives);
-    const marsAppInstance = vm.$root.$children[0];
-    /* globals Mars */
-    Vue.prototype.$api = Object.assign(Mars, {
+    const nbjumpAppInstance = vm.$root.$children[0];
+    /* globals Nbjump */
+    Vue.prototype.$api = Object.assign(Nbjump, {
         '$router': vm.$router,
-        stopPullDownRefresh: marsAppInstance.$refs.refresherHandler.stopPullDownRefresh,
+        stopPullDownRefresh: nbjumpAppInstance.$refs.refresherHandler.stopPullDownRefresh,
         setNavigationBarTitle: opt => {
             judgeOptionType(opt, 'setNavigationBarTitle');
             const {title, success, fail, complete} = opt;
@@ -159,7 +159,7 @@ function initGlobalApi(Vue, vm) {
                     resInfo, 'setNavigationBarTitle', 'title',
                     typeof title, 'string', fail, complete);
             }
-            marsAppInstance.currentTitle = opt.title;
+            nbjumpAppInstance.currentTitle = opt.title;
             typeof success === 'function' && success(resInfo);
             typeof complete === 'function' && complete(resInfo);
 
@@ -205,12 +205,12 @@ function initGlobalApi(Vue, vm) {
                 transitionTimingFunc = timingFunc;
             }
 
-            marsAppInstance.currentNavigationBarTextStyle = frontColor;
-            marsAppInstance.currentNavigationBarBackgroundColor = backgroundColor;
-            marsAppInstance.transitionDuration = transitionDuration
+            nbjumpAppInstance.currentNavigationBarTextStyle = frontColor;
+            nbjumpAppInstance.currentNavigationBarBackgroundColor = backgroundColor;
+            nbjumpAppInstance.transitionDuration = transitionDuration
                 && (transitionDuration / 1000 + 's')
                 || 0;
-            marsAppInstance.transitionTimingFunc = transitionTimingFunc;
+            nbjumpAppInstance.transitionTimingFunc = transitionTimingFunc;
             typeof success === 'function' && success(resInfo);
             typeof complete === 'function' && complete(resInfo);
         },
@@ -229,7 +229,7 @@ function initGlobalApi(Vue, vm) {
                     typeof text, 'string', fail, complete);
             }
             text.length > 4 && (text = text.substring(0, 4) + '...');
-            marsAppInstance.tabList[index] && (marsAppInstance.tabList[index].badge = text);
+            nbjumpAppInstance.tabList[index] && (nbjumpAppInstance.tabList[index].badge = text);
             typeof success === 'function' && success(resInfo);
             typeof complete === 'function' && complete(resInfo);
         },
@@ -242,7 +242,7 @@ function initGlobalApi(Vue, vm) {
                     resInfo, 'removeTabBarBadge', 'index',
                     typeof index, 'number', fail, complete);
             }
-            marsAppInstance.tabList[index] && (marsAppInstance.tabList[index].badge = '');
+            nbjumpAppInstance.tabList[index] && (nbjumpAppInstance.tabList[index].badge = '');
             typeof success === 'function' && success(resInfo);
             typeof complete === 'function' && complete(resInfo);
         },
@@ -255,7 +255,7 @@ function initGlobalApi(Vue, vm) {
                     resInfo, 'showTabBarRedDot', 'index',
                     typeof index, 'number', fail, complete);
             }
-            marsAppInstance.tabList[index] && (marsAppInstance.tabList[index].showRedDot = true);
+            nbjumpAppInstance.tabList[index] && (nbjumpAppInstance.tabList[index].showRedDot = true);
             typeof success === 'function' && success(resInfo);
             typeof complete === 'function' && complete(resInfo);
         },
@@ -268,7 +268,7 @@ function initGlobalApi(Vue, vm) {
                     resInfo, 'hideTabBarRedDot', 'index',
                     typeof index, 'number', fail, complete);
             }
-            marsAppInstance.tabList[index] && (marsAppInstance.tabList[index].showRedDot = false);
+            nbjumpAppInstance.tabList[index] && (nbjumpAppInstance.tabList[index].showRedDot = false);
             typeof success === 'function' && success(resInfo);
             typeof complete === 'function' && complete(resInfo);
         },
@@ -296,10 +296,10 @@ function initGlobalApi(Vue, vm) {
                     resInfo, 'setTabBarStyle', 'borderStyle',
                     borderStyle, 'black|white', fail, complete);
             }
-            marsAppInstance.tabBarSelectedColor = selectedColor;
-            marsAppInstance.tabBarColor = color;
-            marsAppInstance.tabBarBackgroundColor = backgroundColor;
-            marsAppInstance.tabBarBorderStyle = borderStyle;
+            nbjumpAppInstance.tabBarSelectedColor = selectedColor;
+            nbjumpAppInstance.tabBarColor = color;
+            nbjumpAppInstance.tabBarBackgroundColor = backgroundColor;
+            nbjumpAppInstance.tabBarBorderStyle = borderStyle;
             typeof success === 'function' && success(resInfo);
             typeof complete === 'function' && complete(resInfo);
         },
@@ -327,13 +327,13 @@ function initGlobalApi(Vue, vm) {
                     resInfo, 'setTabBarItem', 'selectedIconPath',
                     typeof selectedIconPath, 'string', fail, complete);
             }
-            marsAppInstance.tabList[index] && (marsAppInstance.tabList[index].text = text);
-            marsAppInstance.tabList[index]
+            nbjumpAppInstance.tabList[index] && (nbjumpAppInstance.tabList[index].text = text);
+            nbjumpAppInstance.tabList[index]
                 && iconPath
-                && (marsAppInstance.tabList[index].iconPath = iconPath);
-            marsAppInstance.tabList[index]
+                && (nbjumpAppInstance.tabList[index].iconPath = iconPath);
+            nbjumpAppInstance.tabList[index]
                 && selectedIconPath
-                && (marsAppInstance.tabList[index].selectedIconPath = selectedIconPath);
+                && (nbjumpAppInstance.tabList[index].selectedIconPath = selectedIconPath);
             typeof success === 'function' && success(resInfo);
             typeof complete === 'function' && complete(resInfo);
         },
@@ -346,7 +346,7 @@ function initGlobalApi(Vue, vm) {
                     resInfo, 'showTabBar', 'animation',
                     typeof animation, 'boolean', fail, complete);
             }
-            marsAppInstance.customShowTabBar = true;
+            nbjumpAppInstance.customShowTabBar = true;
             typeof success === 'function' && success(resInfo);
             typeof complete === 'function' && complete(resInfo);
         },
@@ -359,7 +359,7 @@ function initGlobalApi(Vue, vm) {
                     resInfo, 'hideTabBar', 'animation',
                     typeof animation, 'boolean', fail, complete);
             }
-            marsAppInstance.customShowTabBar = false;
+            nbjumpAppInstance.customShowTabBar = false;
             typeof success === 'function' && success(resInfo);
             typeof complete === 'function' && complete(resInfo);
         },

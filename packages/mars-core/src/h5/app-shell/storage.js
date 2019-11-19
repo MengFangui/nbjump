@@ -1,6 +1,6 @@
 /**
  * @file 本地存储
- * @author mars
+ * @author nbjump
  */
 
 class Storage {
@@ -24,7 +24,7 @@ catch (e) {
     ls = new Storage();
     ss = new Storage();
 }
-const PREFIX = 'MARS_';
+const PREFIX = 'NBJUMP_';
 
 /**
  * 设置存储

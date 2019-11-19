@@ -1,6 +1,6 @@
 /**
  * @file main
- * @author mars
+ * @author nbjump
  */
 
 
@@ -9,9 +9,9 @@
 import {Vue} from '../index';
 
 // 引入公共样式
-import './mars-base.css';
+import './nbjump-base.css';
 import initAOPEvents from './AOP';
-import MarsApp from './MarsApp.vue';
+import NbjumpApp from './NbjumpApp.vue';
 import router from './router';
 import initGlobalApi from './globalApi';
 import {tabBars, pageTitleMap, routes, appWin, App, basicComponents} from './export';
@@ -55,7 +55,7 @@ const vm = new Vue({
     data: {
         pageTitleMap
     },
-    render: h => h(MarsApp, {
+    render: h => h(NbjumpApp, {
         props
     })
 }).$mount('#app');

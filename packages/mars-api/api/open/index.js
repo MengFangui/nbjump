@@ -1,6 +1,6 @@
 /**
  * @file open
- * @author mars
+ * @author nbjump
  */
 
 export * from './login';

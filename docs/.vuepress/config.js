@@ -4,9 +4,9 @@
  */
 
 module.exports = {
-    base: '/Mars/',
-    dest: 'docs/.vuepress/dist/Mars',
-    title: 'Mars',
+    base: '/Nbjump/',
+    dest: 'docs/.vuepress/dist/Nbjump',
+    title: 'Nbjump',
     description: 'Vue 驱动的多端开发框架',
     head: [
         ['link', {rel: 'icon', href: 'https://avatars2.githubusercontent.com/u/48916409?s=96&v=4'}]
@@ -48,7 +48,7 @@ module.exports = {
             {text: '0.3.x CHANGELOG', link: '/CHANGELOGS-0.3/core'}
         ],
         lastUpdated: 'Last Updated',
-        repo: 'max-team/Mars',
+        repo: 'max-team/Nbjump',
         docsDir: 'docs',
         editLinks: true,
         editLinkText: '在 GitHub 上编辑此页'

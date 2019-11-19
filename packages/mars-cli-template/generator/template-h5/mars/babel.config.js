@@ -1,5 +1,5 @@
 /* eslint-disable */
-const target = process.env.MARS_CLI_TARGET || 'swan';
+const target = process.env.NBJUMP_CLI_TARGET || 'swan';
 let config = {};
 
 // babel config for H5

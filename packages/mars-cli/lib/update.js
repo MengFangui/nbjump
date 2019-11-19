@@ -33,16 +33,16 @@ const {
 } = require('./helper/utils');
 
 // const dependencyList = [
-//     '@marsjs/build',
-//     '@marsjs/core',
-//     '@marsjs/cli-template'
+//     '@nbjump/build',
+//     '@nbjump/core',
+//     '@nbjump/cli-template'
 // ];
 // const dependencyListH5 = [
-//     '@marsjs/components',
-//     '@marsjs/api',
+//     '@nbjump/components',
+//     '@nbjump/api',
 //     'atom-web-compiler',
 //     'atom2vue-loader',
-//     '@marsjs/vue-cli-plugin-mars-web'
+//     '@nbjump/vue-cli-plugin-nbjump-web'
 // ];
 
 function getDependencyList() {

@@ -11,7 +11,7 @@ const getDefaultConf = require('./defaultConfig');
 
 function getProjectConfig(target) {
     let projectConfig = {};
-    const configPath = path.resolve(process.cwd(), './mars.config.js');
+    const configPath = path.resolve(process.cwd(), './nbjump.config.js');
     if (fs.existsSync(configPath)) {
         projectConfig = require(configPath)(target);
     }
@@ -22,14 +22,14 @@ function getProjectConfig(target) {
 // 兼容原 Task 的配置格式
 function formatConfig(options) {
     const target = options.target;
-    const targetEnv = process.env.MARS_ENV_TARGET || target;
+    const targetEnv = process.env.NBJUMP_ENV_TARGET || target;
     let config = getProjectConfig(targetEnv);
 
     config = merge(getDefaultConf(targetEnv), config);
     const destPath = config.dest;
     config.dest = {
         path: destPath,
-        coreDir: 'mars-core'
+        coreDir: 'nbjump-core'
     };
 
     if (target === 'h5') {
@@ -61,7 +61,7 @@ function formatConfig(options) {
 }
 
 function getRuntimeConfig({
-    corePath = './node_modules/@marsjs/core'
+    corePath = './node_modules/@nbjump/core'
 }) {
     return {
         source: {
@@ -77,18 +77,18 @@ function getRuntimeConfig({
 /**
  * getConfig
  *
- * @param {mars.options} options options
- * @return {mars.config}
+ * @param {nbjump.options} options options
+ * @return {nbjump.config}
  */
 function getConfig(options) {
-    if (!options && process.env.MARS_CLI_OPTIONS) {
+    if (!options && process.env.NBJUMP_CLI_OPTIONS) {
         try {
-            options = JSON.parse(process.env.MARS_CLI_OPTIONS);
+            options = JSON.parse(process.env.NBJUMP_CLI_OPTIONS);
         }
         catch (e) {}
     }
     if (!options) {
-        throw new Error('pass options to @marsjs/build or use @marsjs/cli');
+        throw new Error('pass options to @nbjump/build or use @nbjump/cli');
     }
     return formatConfig(options);
 }

@@ -18,7 +18,7 @@ function getConfig(cmd) {
         target,
         param: env
     } = getTargetParam(cmd.target);
-    const buildPath = path.resolve(process.cwd(), 'node_modules/@marsjs/build');
+    const buildPath = path.resolve(process.cwd(), 'node_modules/@nbjump/build');
     return {
         target,
         buildPath,

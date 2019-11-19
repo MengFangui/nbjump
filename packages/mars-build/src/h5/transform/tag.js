@@ -7,7 +7,7 @@
 
 // import component from './component';
 const tagMap = require('./vueComponentTagMap');
-const customTemplate = 'template-mars';
+const customTemplate = 'template-nbjump';
 
 const nativeEvent = {
     '@touchstart': '@touchstart',
@@ -35,11 +35,11 @@ function toCamel(name) {
     return camelName.substring(0, 1).toUpperCase() + camelName.substring(1);
 }
 
-// 判断租先节点是否含有 template-mars target=swan|wx，如果含有，则不收集该ast tag
+// 判断租先节点是否含有 template-nbjump target=swan|wx，如果含有，则不收集该ast tag
 function checkScopedTemplateIsH5(ast) {
     let parent = ast.parent;
     if (parent) {
-        if (parent.tag === 'template-mars' && parent.attrsMap && parent.attrsMap.target !== 'h5') {
+        if (parent.tag === 'template-nbjump' && parent.attrsMap && parent.attrsMap.target !== 'h5') {
             return false;
         }
         else {
@@ -67,7 +67,7 @@ module.exports = function (ast, options) {
 
     if (
         tag === customTemplate
-        && ast.attrsMap.target === (process.env.MARS_ENV_TARGET || 'h5')
+        && ast.attrsMap.target === (process.env.NBJUMP_ENV_TARGET || 'h5')
     ) {
         tag = 'template';
         delete ast.attrsMap.target;

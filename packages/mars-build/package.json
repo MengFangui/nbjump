@@ -1,5 +1,5 @@
 {
-    "name": "@marsjs/build",
+    "name": "@nbjump/build",
     "version": "0.3.14",
     "scripts": {
         "test": "jest --coverage"

@@ -86,7 +86,7 @@ export function previewImage(options = {}) {
         overflow: 'hidden'
     };
     const swiperDom = document.createElement('div');
-    swiperDom.className = 'mars-swiper';
+    swiperDom.className = 'nbjump-swiper';
     Object.keys(swiperStyle).forEach(key => {
         swiperDom.style[key] = swiperStyle[key];
     });
@@ -99,7 +99,7 @@ export function previewImage(options = {}) {
         height: '100%'
     };
     const swiperWrapperDom = document.createElement('div');
-    swiperWrapperDom.className = 'mars-swiper-wrapper';
+    swiperWrapperDom.className = 'nbjump-swiper-wrapper';
     Object.keys(swiperWrapperStyle).forEach(key => {
         swiperWrapperDom.style[key] = swiperWrapperStyle[key];
     });
@@ -116,7 +116,7 @@ export function previewImage(options = {}) {
 
     for (const url of urls) {
         const swiperItemDom = document.createElement('div');
-        swiperItemDom.className = 'mars-swiper-item';
+        swiperItemDom.className = 'nbjump-swiper-item';
         Object.keys(swiperItemSyle).forEach(key => {
             swiperItemDom.style[key] = swiperItemSyle[key];
         });
@@ -166,7 +166,7 @@ export function previewImage(options = {}) {
         'text-shadow': '1px 1px 3px #000'
     };
     const swiperProgress = document.createElement('label');
-    swiperProgress.className = 'mars-swiper-progress';
+    swiperProgress.className = 'nbjump-swiper-progress';
     Object.keys(swiperProgressStyle).forEach(key => {
         swiperProgress.style[key] = swiperProgressStyle[key];
     });

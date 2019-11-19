@@ -13,8 +13,8 @@ const modalMaskStyle = {
     right: 0,
     bottom: 0,
     background: 'rgba(0, 0, 0, 0.65)',
-    animation: 'marsCustomShowMaskAnimation .3s',
-    webkitAnimation: 'marsCustomShowMaskAnimation .3s'
+    animation: 'nbjumpCustomShowMaskAnimation .3s',
+    webkitAnimation: 'nbjumpCustomShowMaskAnimation .3s'
 };
 
 const modalWrapperStyle = {
@@ -36,8 +36,8 @@ const modalBoxStyle = {
     webkitAlignItems: 'center',
     justifyContent: 'center',
     webkitJustifyContent: 'center',
-    animation: 'marsCustomZoominAnimation .3s',
-    webkitAnimation: 'marsCustomZoominAnimation .3s'
+    animation: 'nbjumpCustomZoominAnimation .3s',
+    webkitAnimation: 'nbjumpCustomZoominAnimation .3s'
 };
 
 const modalTitleStyle = {
@@ -92,13 +92,13 @@ function create(option) {
     } = option;
 
     const modalMask = document.createElement('div');
-    modalMask.id = 'mars-custom-modal-mask';
+    modalMask.id = 'nbjump-custom-modal-mask';
     Object.keys(modalMaskStyle).forEach(key => {
         modalMask.style[key] = modalMaskStyle[key];
     });
 
     const modalWrapper = document.createElement('div');
-    modalWrapper.id = 'mars-custom-modal';
+    modalWrapper.id = 'nbjump-custom-modal';
     Object.keys(modalWrapperStyle).forEach(key => {
         modalWrapper.style[key] = modalWrapperStyle[key];
     });
@@ -133,7 +133,7 @@ function create(option) {
 
     // 取消按钮
     const modalCancelBtn = document.createElement('div');
-    modalCancelBtn.id = 'mars-custom-modal-cancel-btn';
+    modalCancelBtn.id = 'nbjump-custom-modal-cancel-btn';
     Object.assign(modalCancelBtn.style, {
         color: cancelColor,
         width: '50%',
@@ -144,7 +144,7 @@ function create(option) {
 
     // 确认按钮
     const modalConfirmBtn = document.createElement('div');
-    modalConfirmBtn.id = 'mars-custom-modal-confirm-btn';
+    modalConfirmBtn.id = 'nbjump-custom-modal-confirm-btn';
     Object.assign(modalConfirmBtn.style, {
         color: confirmColor,
         width: '50%',
@@ -168,16 +168,16 @@ function create(option) {
         confirm: false,
         cancel: false
     };
-    const marsConfirmBtn = document.querySelector('#mars-custom-modal #mars-custom-modal-confirm-btn');
-    const marsCancelBtn = document.querySelector('#mars-custom-modal #mars-custom-modal-cancel-btn');
-    marsConfirmBtn.onclick = () => {
+    const nbjumpConfirmBtn = document.querySelector('#nbjump-custom-modal #nbjump-custom-modal-confirm-btn');
+    const nbjumpCancelBtn = document.querySelector('#nbjump-custom-modal #nbjump-custom-modal-cancel-btn');
+    nbjumpConfirmBtn.onclick = () => {
         resInfo.confirm = true;
         remove();
         callback(success, resInfo);
         callback(complete, resInfo);
         return Promise.resolve(resInfo);
     };
-    marsCancelBtn && (marsCancelBtn.onclick = () => {
+    nbjumpCancelBtn && (nbjumpCancelBtn.onclick = () => {
         resInfo.cancel = true;
         remove();
         callback(success, resInfo);
@@ -188,10 +188,10 @@ function create(option) {
 }
 
 function remove() {
-    const marsModal = document.querySelector('#mars-custom-modal');
-    const marsModalMask = document.querySelector('#mars-custom-modal-mask');
-    marsModal && marsModal.parentNode.removeChild(marsModal);
-    marsModalMask && marsModalMask.parentNode.removeChild(marsModalMask);
+    const nbjumpModal = document.querySelector('#nbjump-custom-modal');
+    const nbjumpModalMask = document.querySelector('#nbjump-custom-modal-mask');
+    nbjumpModal && nbjumpModal.parentNode.removeChild(nbjumpModal);
+    nbjumpModalMask && nbjumpModalMask.parentNode.removeChild(nbjumpModalMask);
 }
 
 /* eslint-disable fecs-export-on-declare */

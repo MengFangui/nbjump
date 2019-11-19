@@ -13,10 +13,10 @@
 const through = require('through2');
 const gutil = require('gulp-util');
 const PluginError = gutil.PluginError;
-// const customTemplate = 'template-mars';
+// const customTemplate = 'template-nbjump';
 
 // 常量
-const PLUGIN_NAME = 'gulp-mars';
+const PLUGIN_NAME = 'gulp-nbjump';
 
 // const vueCompiler = require('vue-template-compiler/build');
 const fs = require('fs');
@@ -115,7 +115,7 @@ async function compile(file, opt) {
         fileSuffix,
         fPath
     }, opt);
-    const marsConfig = options._config;
+    const nbjumpConfig = options._config;
 
     const {
         templateCompiler,
@@ -145,14 +145,14 @@ async function compile(file, opt) {
         mpConfig,
         target: options.target,
         path: fPath + '.vue',
-        dest: marsConfig.dest,
-        mars: marsConfig.h5 || {}
+        dest: nbjumpConfig.dest,
+        nbjump: nbjumpConfig.h5 || {}
     });
     // use blockConfig first
     config = mpConfig ? mpConfig : (scriptRet && scriptRet.config);
-    // prefer appConfig in marsConfig
+    // prefer appConfig in nbjumpConfig
     if (isApp) {
-        const appConfig = marsConfig.appConfig && marsConfig.appConfig.config;
+        const appConfig = nbjumpConfig.appConfig && nbjumpConfig.appConfig.config;
         config = appConfig || config;
     }
 
@@ -197,12 +197,12 @@ async function compile(file, opt) {
         const {componentsInUsed} = await templateCompiler(template, {
             componentSet,
             components: scriptRet.components,
-            target: process.env.MARS_ENV_TARGET || 'h5'
+            target: process.env.NBJUMP_ENV_TARGET || 'h5'
         });
 
         templateCode = template.contents.toString();
         // templateCode = generate(templateRet.ast, {
-        //     target: process.env.MARS_ENV_TARGET || 'h5'
+        //     target: process.env.NBJUMP_ENV_TARGET || 'h5'
         // });
 
         await scriptPostCompiler(script, {
@@ -236,7 +236,7 @@ async function compile(file, opt) {
         // let routerContent = fs.readFileSync(__dirname + '/h5/template/router.js');
         // routerContent = compileRouter(routerContent, {
         //     config,
-        //     mars: marsConfig.h5 || null
+        //     nbjump: nbjumpConfig.h5 || null
         // });
         // fs.writeFileSync(options.dest + '/router.js', routerContent);
 
@@ -246,7 +246,7 @@ async function compile(file, opt) {
         // 处理 getApp appApi
         // let appApiContent = fs.readFileSync(__dirname + '/h5/template/appApi.js');
         // fs.writeFileSync(options.dest + '/appApi.js', appScriptContent);
-        // fs.writeFileSync(options.dest + '/main.js', `import main from './mars-core/template/main'`);
+        // fs.writeFileSync(options.dest + '/main.js', `import main from './nbjump-core/template/main'`);
         // 处理 globalApi
         // let apiPluginContent = fs.readFileSync(__dirname + '/h5/template/globalApi.js');
         // apiPluginContent = compileApi(apiPluginContent, opt);
@@ -268,10 +268,10 @@ async function compile(file, opt) {
 
         const buildConfig = options._config;
         const {packages = {}, h5 = {}} = buildConfig;
-        const API_LIB = packages.api || '@marsjs/api';
+        const API_LIB = packages.api || '@nbjump/api';
         const mode = h5.mode || 'history';
-        content += `import Mars, {directives} from '${API_LIB}';\n`;
-        content += 'export {Mars, directives};\n';
+        content += `import Nbjump, {directives} from '${API_LIB}';\n`;
+        content += 'export {Nbjump, directives};\n';
         content += `export const mode = '${mode}';\n`;
 
         if (pagesInfo.app) {
@@ -361,13 +361,13 @@ async function compile(file, opt) {
     // content = compileMain(content, {
     //     mainOptions,
     //     componentSet,
-    //     mars: marsConfig.h5 || {}
+    //     nbjump: nbjumpConfig.h5 || {}
     // });
     // fs.writeFileSync(options.dest + '/main.js', content);
 
     // 处理style
 //     const h5StylesArr = styles.filter(item =>
-//         !item.attrs || (!item.attrs.target || item.attrs.target === (process.env.MARS_ENV_TARGET || 'h5')));
+//         !item.attrs || (!item.attrs.target || item.attrs.target === (process.env.NBJUMP_ENV_TARGET || 'h5')));
 //     const styleContent = h5StylesArr.reduce((styleStr, {
 //             scoped,
 //             content,

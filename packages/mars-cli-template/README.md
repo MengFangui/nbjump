@@ -1,4 +1,4 @@
-# @marsjs/cli-template
+# @nbjump/cli-template
 
-> template for mars-cli
+> template for nbjump-cli
 

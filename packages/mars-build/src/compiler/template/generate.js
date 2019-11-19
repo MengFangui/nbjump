@@ -8,7 +8,7 @@
 /* eslint-disable no-native-reassign */
 
 /* eslint-disable fecs-min-vars-per-destructure */
-const customTemplate = 'template-mars';
+const customTemplate = 'template-nbjump';
 
 module.exports = function generate(obj, options = {}) {
     const {
@@ -23,7 +23,7 @@ module.exports = function generate(obj, options = {}) {
         return text;
     }
 
-    if (tag === customTemplate && (process.env.MARS_ENV_TARGET || options.target) !== attrsMap.target) {
+    if (tag === customTemplate && (process.env.NBJUMP_ENV_TARGET || options.target) !== attrsMap.target) {
         return;
     }
     else if (tag === customTemplate) {

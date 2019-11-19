@@ -1,6 +1,6 @@
 <template>
     <div 
-        class="mars-pull-refresh-wrap"
+        class="nbjump-pull-refresh-wrap"
         ref="scroller"
     >
         <div
@@ -8,22 +8,22 @@
                 height: `${height}px`
             }"
             :class="{
-                'mars-pull-refresh-header-loading': currentStep === 3,
-                'mars-pull-refresh-header-loaded': currentStep === 4
+                'nbjump-pull-refresh-header-loading': currentStep === 3,
+                'nbjump-pull-refresh-header-loaded': currentStep === 4
             }"
-            class="mars-pull-refresh-header"
+            class="nbjump-pull-refresh-header"
         >
-            <div class="mars-pull-refresh-loading">
-                <span class="mars-pull-refresh-pulling-text mars-gap-left-small">松手加载</span>
-                <span class="mars-pull-refresh-loading-text mars-gap-left-small">Loading...</span>
+            <div class="nbjump-pull-refresh-loading">
+                <span class="nbjump-pull-refresh-pulling-text nbjump-gap-left-small">松手加载</span>
+                <span class="nbjump-pull-refresh-loading-text nbjump-gap-left-small">Loading...</span>
             </div>
-            <div class="mars-pull-refresh-loaded">
-                <span class="mars-pull-refresh-loaded-text mars-gap-left-middle">
+            <div class="nbjump-pull-refresh-loaded">
+                <span class="nbjump-pull-refresh-loaded-text nbjump-gap-left-middle">
                     刷新完毕
                 </span>
             </div>
         </div>
-        <div class="mars-pull-refresh-content">
+        <div class="nbjump-pull-refresh-content">
             <slot/>
         </div>
     </div>
@@ -201,17 +201,17 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.mars-pull-refresh-wrap {
+.nbjump-pull-refresh-wrap {
     font-size: 15px;
 }
-.mars-pull-refresh-header {
+.nbjump-pull-refresh-header {
     height: 0;
     text-align: center;
     overflow: hidden;
     background-color: #fff;
 }
 
-.mars-pull-refresh-loading-icon {
+.nbjump-pull-refresh-loading-icon {
     display: none;
     margin: 20px 0;
     width: 18px;
@@ -221,7 +221,7 @@ export default {
     background-color: #2a2a31;
     opacity: .3;
 }
-.mars-pull-refresh-loading-text {
+.nbjump-pull-refresh-loading-text {
     display: none;
     font-size: 12px;
     line-height: 1;
@@ -229,12 +229,12 @@ export default {
     margin-top: 11px;
     margin-bottom: 11px;
 }
-.mars-pull-refresh-loaded {
+.nbjump-pull-refresh-loaded {
     display: none;
     height: 28px;
     color: #000;
 
-    .mars-pull-refresh-loaded-text {
+    .nbjump-pull-refresh-loaded-text {
         display: inline-block;
         font-size: 12px;
         line-height: 1;
@@ -242,19 +242,19 @@ export default {
         margin-bottom: 8px;
     }
 }
-.mars-pull-refresh-header-loading {
-    .mars-pull-refresh-pulling-text {
+.nbjump-pull-refresh-header-loading {
+    .nbjump-pull-refresh-pulling-text {
         display: none;
     }
-    .mars-pull-refresh-loading-text {
+    .nbjump-pull-refresh-loading-text {
         display: inline-block;
     }
 }
-.mars-pull-refresh-header-loaded {
-    .mars-pull-refresh-loading {
+.nbjump-pull-refresh-header-loaded {
+    .nbjump-pull-refresh-loading {
         display: none;
     }
-    .mars-pull-refresh-loaded {
+    .nbjump-pull-refresh-loaded {
         /* lesslint-disable vendor-prefixes-sort */
         display: inline-block;
         -webkit-transform: translateY(0);
@@ -266,8 +266,8 @@ export default {
         /* lesslint-enable vendor-prefixes-sort */
     }
 }
-.mars-pull-refresh-header-loading,
-.mars-pull-refresh-header-loaded {
+.nbjump-pull-refresh-header-loading,
+.nbjump-pull-refresh-header-loaded {
     will-change: height;
     -webkit-transition: height 300ms ease-out;
             transition: height 300ms ease-out;

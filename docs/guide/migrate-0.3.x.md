@@ -8,14 +8,14 @@
 
 ### Features
 
-* **core:** 支持从 `@marsjs/core` 导出 `$platform`/`config`
+* **core:** 支持从 `@nbjump/core` 导出 `$platform`/`config`
 * **core:** 支持通过运行时 `config` 配置 H5 路由 `mode`/`base`
 * **core:** 增加 TypeScript 类型定义
 * **build:** 组件名支持 PascalCase
 * **build:** 模版中支持使用模版字符串
 * **build:** 引入 SFC 组件时，支持 `*.vue` 后缀写法
 * **build:** SFC script 导出支持 `Vue.extend()` 写法
-* **cli & cli-template:** 支持跳过 Mars 编译用直接 serve H5 dest 目录
+* **cli & cli-template:** 支持跳过 Nbjump 编译用直接 serve H5 dest 目录
 
 
 ### Bug Fixes
@@ -52,7 +52,7 @@
 
 4、npm 引入的 UI 组件库以及组件库作者
 
-如果有使用 npm 引入的 UI 组件库，需要将组件库中的 Mars 框架升级到 `0.3.x` 并发布新版本。
+如果有使用 npm 引入的 UI 组件库，需要将组件库中的 Nbjump 框架升级到 `0.3.x` 并发布新版本。
 
 
 ## 如何迁移
@@ -62,25 +62,25 @@
 1、新建项目并转移业务代码
 
 ```sh
-# 安装 0.3.x mars-cli
-npm install -g @marsjs/cli@next
+# 安装 0.3.x nbjump-cli
+npm install -g @nbjump/cli@next
 ```
 
-安装 `0.3.x` 版本的 `@marsjs/cli`，创建一个新项目，然后将业务代码和配置文件合并转移到项目中。
+安装 `0.3.x` 版本的 `@nbjump/cli`，创建一个新项目，然后将业务代码和配置文件合并转移到项目中。
 
 2、从现有项目迁移
 
 ```sh
 # 安装 0.3.x 依赖包, 非 H5 项目
-npm install @marsjs/cli@next @marsjs/build@next @marsjs/core@next -D
+npm install @nbjump/cli@next @nbjump/build@next @nbjump/core@next -D
 
 # H5 项目
-npm install @marsjs/cli@next @marsjs/build@next @marsjs/core@next -D
-npm install @marsjs/cli-template@next -D
+npm install @nbjump/cli@next @nbjump/build@next @nbjump/core@next -D
+npm install @nbjump/cli-template@next -D
 
 ```
 
 
-- 升级全局和本地安装的 `@marsjs/cli` 版本到 `0.3.x`
-- 升级本地的 `@marsjs/core` `@marsjs/build` 版本到 `0.3.x`
-- 升级本地的 `@marsjs/cli-template` 版本到 `0.3.x` （H5 项目）
+- 升级全局和本地安装的 `@nbjump/cli` 版本到 `0.3.x`
+- 升级本地的 `@nbjump/core` `@nbjump/build` 版本到 `0.3.x`
+- 升级本地的 `@nbjump/cli-template` 版本到 `0.3.x` （H5 项目）

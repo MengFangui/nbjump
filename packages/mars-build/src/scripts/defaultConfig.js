@@ -4,7 +4,7 @@
  */
 
 module.exports = function (target) {
-    const CLI_TARGET = process.env.MARS_CLI_TARGET || target;
+    const CLI_TARGET = process.env.NBJUMP_CLI_TARGET || target;
 
     const config = {
         verbose: false,

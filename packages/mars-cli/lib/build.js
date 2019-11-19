@@ -27,27 +27,27 @@ async function build(cmd) {
     if (!process.env.NODE_ENV) {
         process.env.NODE_ENV = 'production';
     }
-    process.env.MARS_CLI_OPTIONS = JSON.stringify(options);
-    process.env.MARS_CLI_TARGET = target;
-    process.env.MARS_CLI_ENV = env;
-    // process.env.MARS_CLI_DEST = env ? `./dist-${env}` : './dist-h5';
-    process.env.MARS_ENV_TARGET = `${target}${env ? `:${env}` : ''}`;
+    process.env.NBJUMP_CLI_OPTIONS = JSON.stringify(options);
+    process.env.NBJUMP_CLI_TARGET = target;
+    process.env.NBJUMP_CLI_ENV = env;
+    // process.env.NBJUMP_CLI_DEST = env ? `./dist-${env}` : './dist-h5';
+    process.env.NBJUMP_ENV_TARGET = `${target}${env ? `:${env}` : ''}`;
 
     const {dest, h5: h5Config} = getBuildConfig(options);
     const servePath = dest.servePath;
-    // for mars-cli-service
-    process.env.MARS_PWA = !!(h5Config && h5Config.supportPWA);
+    // for nbjump-cli-service
+    process.env.NBJUMP_PWA = !!(h5Config && h5Config.supportPWA);
 
     function serveH5() {
         // const child = execa('npm', ['run', 'build-dist-h5']);
-        const args = ['mars-cli-service', 'build', '--path', servePath];
+        const args = ['nbjump-cli-service', 'build', '--path', servePath];
         console.log('[build h5]', args.join(' '));
         const child = execa('npx', args);
         child.stdout.pipe(process.stdout);
         child.stderr.pipe(process.stderr);
     }
 
-    if (target === 'h5' && cmd.h5skip === 'mars') {
+    if (target === 'h5' && cmd.h5skip === 'nbjump') {
         return serveH5();
     }
 

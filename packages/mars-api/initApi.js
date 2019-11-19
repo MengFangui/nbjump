@@ -1,6 +1,6 @@
 /**
  * @file 合并api
- * @author mars
+ * @author nbjump
  */
 
 import * as system from './api/system';
@@ -25,9 +25,9 @@ export const directives = {
     animation: animationDirective
 };
 
-export default function initNativeApi(mars) {
+export default function initNativeApi(nbjump) {
     Object.assign(
-        mars,
+        nbjump,
         system,
         storage,
         file,

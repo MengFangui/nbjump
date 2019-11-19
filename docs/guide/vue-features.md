@@ -101,12 +101,12 @@ filters 可以在插值和 props 中使用，复杂表达式可以在插值、pr
 
 ## Vuex
 
-Mars 中使用 Vuex 的方法与 Vue 类似，首先在 app.vue 中引入 Vue 和 Vuex，并初始化：
+Nbjump 中使用 Vuex 的方法与 Vue 类似，首先在 app.vue 中引入 Vue 和 Vuex，并初始化：
 
-> 由于 Mars 使用定制的 Vue ，因此务必**从 @marsjs/core 中引入 Vue**。
+> 由于 Nbjump 使用定制的 Vue ，因此务必**从 @nbjump/core 中引入 Vue**。
 
 ```javascript
-import {Vue} from '@marsjs/core';
+import {Vue} from '@nbjump/core';
 import Vuex from 'vuex';
 
 Vue.use(Vuex);

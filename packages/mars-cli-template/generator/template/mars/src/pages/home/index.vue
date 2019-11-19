@@ -8,7 +8,7 @@
 <script type="config">
 {
     config: {
-        navigationBarTitleText: 'Mars'
+        navigationBarTitleText: 'Nbjump'
     }
 }
 </script>

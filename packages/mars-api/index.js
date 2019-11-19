@@ -5,9 +5,9 @@
 
 import initNativeApi, {directives} from './initApi';
 
-let Mars = {};
-initNativeApi(Mars);
+let Nbjump = {};
+initNativeApi(Nbjump);
 
 export {directives};
-export default Mars;
+export default Nbjump;
 

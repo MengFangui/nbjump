@@ -13,8 +13,8 @@ const actionSheetMaskStyle = {
     right: 0,
     bottom: 0,
     background: 'rgba(0, 0, 0, 0.65)',
-    animation: 'marsCustomShowMaskAnimation .3s',
-    webkitAnimation: 'marsCustomShowMaskAnimation .3s'
+    animation: 'nbjumpCustomShowMaskAnimation .3s',
+    webkitAnimation: 'nbjumpCustomShowMaskAnimation .3s'
 };
 
 const actionSheetWrapperStyle = {
@@ -67,15 +67,15 @@ function create(option) {
     const {itemList, itemColor, success, fail, complete} = option;
 
     const actionSheetMask = document.createElement('div');
-    actionSheetMask.id = 'mars-custom-action-sheet-mask';
+    actionSheetMask.id = 'nbjump-custom-action-sheet-mask';
     Object.assign(actionSheetMask.style, actionSheetMaskStyle);
 
     const actionSheetWrapper = document.createElement('div');
-    actionSheetWrapper.id = 'mars-custom-action-sheet';
+    actionSheetWrapper.id = 'nbjump-custom-action-sheet';
     Object.assign(actionSheetWrapper.style, actionSheetWrapperStyle);
 
     const actionSheetContent = document.createElement('div');
-    actionSheetContent.id = 'mars-custom-action-sheet-content';
+    actionSheetContent.id = 'nbjump-custom-action-sheet-content';
     Object.assign(actionSheetContent.style, actionSheetContentStyle);
 
     itemList.forEach((item, index) => {
@@ -89,7 +89,7 @@ function create(option) {
     });
 
     const cancelBtn = document.createElement('div');
-    cancelBtn.id = 'mars-custom-action-sheet-cancel-btn';
+    cancelBtn.id = 'nbjump-custom-action-sheet-cancel-btn';
     Object.assign(cancelBtn.style, actionSheetItemStyle, {
         color: '#000'
     });
@@ -101,14 +101,14 @@ function create(option) {
     document.body.appendChild(actionSheetWrapper);
     document.body.appendChild(actionSheetMask);
 
-    const marsActionSheetMask = document.querySelector('#mars-custom-action-sheet-mask');
-    const marsActionSheet = document.querySelector('#mars-custom-action-sheet');
-    const marsActionSheetContent = marsActionSheet.querySelector('#mars-custom-action-sheet-content');
-    const marsActionSheetCancelBtn = marsActionSheet.querySelector('#mars-custom-action-sheet-cancel-btn');
+    const nbjumpActionSheetMask = document.querySelector('#nbjump-custom-action-sheet-mask');
+    const nbjumpActionSheet = document.querySelector('#nbjump-custom-action-sheet');
+    const nbjumpActionSheetContent = nbjumpActionSheet.querySelector('#nbjump-custom-action-sheet-content');
+    const nbjumpActionSheetCancelBtn = nbjumpActionSheet.querySelector('#nbjump-custom-action-sheet-cancel-btn');
 
     let resInfo = {errMsg: 'showActionSheet:ok'};
 
-    marsActionSheetContent.onclick = e => {
+    nbjumpActionSheetContent.onclick = e => {
         const target = e.target || e.srcElement;
         if (target.dataset.tapIndex > -1) {
             resInfo.tapIndex = parseInt(target.dataset.tapIndex, 10);
@@ -118,28 +118,28 @@ function create(option) {
             return Promise.resolve(resInfo);
         }
     };
-    marsActionSheetCancelBtn.onclick = () => {
+    nbjumpActionSheetCancelBtn.onclick = () => {
         remove();
         callback(complete, resInfo);
         return Promise.resolve(resInfo);
     };
-    marsActionSheetMask.onclick = () => {
+    nbjumpActionSheetMask.onclick = () => {
         remove();
         callback(complete, resInfo);
         return Promise.resolve(resInfo);
     };
     setTimeout(() => {
-        marsActionSheet.style.transform = 'translateY(0)';
-        marsActionSheet.style.webkitTransform = 'translateY(0)';
+        nbjumpActionSheet.style.transform = 'translateY(0)';
+        nbjumpActionSheet.style.webkitTransform = 'translateY(0)';
     }, 10);
 
 }
 
 function remove() {
-    const marsActionSheet = document.querySelector('#mars-custom-action-sheet');
-    const marsActionSheetMask = document.querySelector('#mars-custom-action-sheet-mask');
-    marsActionSheet && marsActionSheet.parentNode.removeChild(marsActionSheet);
-    marsActionSheetMask && marsActionSheetMask.parentNode.removeChild(marsActionSheetMask);
+    const nbjumpActionSheet = document.querySelector('#nbjump-custom-action-sheet');
+    const nbjumpActionSheetMask = document.querySelector('#nbjump-custom-action-sheet-mask');
+    nbjumpActionSheet && nbjumpActionSheet.parentNode.removeChild(nbjumpActionSheet);
+    nbjumpActionSheetMask && nbjumpActionSheetMask.parentNode.removeChild(nbjumpActionSheetMask);
 }
 
 /* eslint-disable fecs-export-on-declare */

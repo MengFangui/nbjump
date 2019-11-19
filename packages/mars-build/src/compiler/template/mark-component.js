@@ -9,7 +9,7 @@
 
 const {compile: compileTemplate} = require('vue-template-compiler/build');
 const transpile = require('vue-template-es2015-compiler');
-const customTemplate = 'template-mars';
+const customTemplate = 'template-nbjump';
 const {generate} = require('./render');
 const {hyphenate} = require('../../helper/util');
 
@@ -41,7 +41,7 @@ function isInFor(el) {
     return isInFor(el.parent);
 }
 
-// 判断租先节点是否含有 template-mars target当前环境，如果含有，则收集ast tag
+// 判断租先节点是否含有 template-nbjump target当前环境，如果含有，则收集ast tag
 function checkCurrentEnvComponent(ast, target) {
     let parent = ast.parent;
     if (parent) {
@@ -74,7 +74,7 @@ function getMarkNode(options, componentsInUsed = {}) {
         const isComp = components && components[tag];
         el.isComp = isComp;
 
-        if (isComp && checkCurrentEnvComponent(el, target || process.env.MARS_ENV_TARGET)) {
+        if (isComp && checkCurrentEnvComponent(el, target || process.env.NBJUMP_ENV_TARGET)) {
             componentsInUsed[tag].using = true;
         }
 

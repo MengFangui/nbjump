@@ -4,7 +4,7 @@
 ## 开发规范
 
 ### 文件组织结构
-Mars 框架中 App、Page、Component 使用 vue 单文件组件规范，定义在 `.vue` 文件中，其中 `<script>` 区块需使用 ES module 模式导出（即 `export default {}`）
+Nbjump 框架中 App、Page、Component 使用 vue 单文件组件规范，定义在 `.vue` 文件中，其中 `<script>` 区块需使用 ES module 模式导出（即 `export default {}`）
 
 目录结构如下，其中 `app.vue` 为 APP 入口文件（不支持其他文件名），入口文件无需包含 `<template>` 区块：
 
@@ -19,14 +19,14 @@ Mars 框架中 App、Page、Component 使用 vue 单文件组件规范，定义�
 |   ├── app.vue            APP 入口文件
 |   └── project.swan.json  小程序 project 文件
 ├── package.json
-└── mars.config.js         编译配置文件, 参考【编译配置】
+└── nbjump.config.js         编译配置文件, 参考【编译配置】
 ```
 
 ## App
 
 App 是小程序的入口文件，约定其文件名为 `app.vue`。可以在 App 上定义一些全局的配置，绑定 App 生命周期方法或定义自定义属性，以及定义全局样式。
 
-Mars 中 App、Page、Component 的相关配置，需要配置到 Vue 文件 script 部分导出对象的 `config` 字段中。
+Nbjump 中 App、Page、Component 的相关配置，需要配置到 Vue 文件 script 部分导出对象的 `config` 字段中。
 
 
 ::: warning
@@ -55,7 +55,7 @@ Mars 中 App、Page、Component 的相关配置，需要配置到 Vue 文件 scr
 </script>
 ```
 
-详见 [[FEATURE]优化 SFC config 配置条件编译能力](https://github.com/max-team/Mars/issues/35)
+详见 [[FEATURE]优化 SFC config 配置条件编译能力](https://github.com/max-team/Nbjump/issues/35)
 :::
 
 
@@ -95,7 +95,7 @@ Page 示例代码: `pages/home/index.vue`
 <template>
     <view class="page">
         <c-hello :helloText="helloText">
-            <text>Mars!</text>
+            <text>Nbjump!</text>
         </c-hello>
     </view>
 </template>
@@ -139,7 +139,7 @@ export default {
 ```html
 <template>
     <my-hello :helloText="helloText">
-        <text>Mars!</text>
+        <text>Nbjump!</text>
     </my-hello>
 </template>
 
@@ -269,7 +269,7 @@ app.$mpUpdated(...);
 
 ## 使用小程序组件和页面
 
-支持在 mars 项目中使用小程序的组件和页面，具体方法为：
+支持在 nbjump 项目中使用小程序的组件和页面，具体方法为：
 
 ### 使用小程序组件
 
@@ -323,7 +323,7 @@ export default {
 
 ## 生命周期和事件方法
 
-Mars 支持完整的 Vue 生命周期和小程序生命周期及事件方法（部分在 H5 暂未支持）详见 [多端适配 - 生命周期](./platforms.html#生命周期和事件方法)。
+Nbjump 支持完整的 Vue 生命周期和小程序生命周期及事件方法（部分在 H5 暂未支持）详见 [多端适配 - 生命周期](./platforms.html#生命周期和事件方法)。
 
 生命周期图示及顺序
 
@@ -344,7 +344,7 @@ Mars 支持完整的 Vue 生命周期和小程序生命周期及事件方法（�
 框架的组件规范使用百度智能小程序和微信小程序组件规范，使用时按照小程序的组件名、属性名和事件名使用，属性和事件绑定使用 vue 语法，如：`<input :value="value" @input="onInput" />`
 
 ## 小程序内置 API
-Mars 的 API 规范使用百度智能小程序和微信小程序 API 规范，为了实现多端兼容，框架会在 App 实例及 Page/Component 实例上通过 `$api` 字段来挂载原生 API，即可以在实例上通过 `this.$api` 或者在其他 js 文件中通过 `app.$api` (`app = getApp()`) 来访问小程序 API。
+Nbjump 的 API 规范使用百度智能小程序和微信小程序 API 规范，为了实现多端兼容，框架会在 App 实例及 Page/Component 实例上通过 `$api` 字段来挂载原生 API，即可以在实例上通过 `this.$api` 或者在其他 js 文件中通过 `app.$api` (`app = getApp()`) 来访问小程序 API。
 
 另外，为了开发方便，通过上述方式调用 API 时框架会自动将原生的异步 API 转换为 Promise API，可以直接用 Promise 方式使用，如
 
@@ -353,7 +353,7 @@ Mars 的 API 规范使用百度智能小程序和微信小程序 API 规范，�
 this.$api.request({
     url: 'https://m.baidu.com/', 
     data: {
-        from: 'mars' 
+        from: 'nbjump' 
     }
 }).then(res => {
     console.log(res.data);
@@ -368,16 +368,16 @@ app.$api.request().then();
 
 ```
 
-## @marsjs/core
+## @nbjump/core
 
-运行时可以从 `@marsjs/core` 引入以下模块
+运行时可以从 `@nbjump/core` 引入以下模块
 
 ### `Vue`
 
 运行时使用的 Vue，用于使用 `vuex` 或定义全局过滤器等。
 
 ### `config`
-Since：`@marsjs/core@0.3.0`
+Since：`@nbjump/core@0.3.0`
 
 运行时配置接口
 
@@ -389,4 +389,4 @@ Since：`@marsjs/core@0.3.0`
 
 Type: enum('history', 'hash')
 
-设置 H5 router 的 mode 选项，优先级高于 `mars.config.js` 中的配置。
+设置 H5 router 的 mode 选项，优先级高于 `nbjump.config.js` 中的配置。

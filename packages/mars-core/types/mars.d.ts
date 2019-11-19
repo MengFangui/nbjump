@@ -14,14 +14,14 @@ declare global {
 }
 
 export interface swanApp {
-    $api: marsApis;
+    $api: nbjumpApis;
 }
 
 export {
     backgroundAudioManager
 } from './swan';
 
-export interface marsApis {
+export interface nbjumpApis {
     navigateToSmartProgram: (options: swanApiOptionsNavigateToSmartProgram) => Promise<void>;
     getStorage: (options: swanApiOptionsGetStorage) => Promise<any>;
     setStorage: (options: any) => Promise<any>;

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div
-            id="mars"
+            id="nbjump"
             :class="[transitionStatus === 'enter' ? 'transition-status-enter' : null]"
         >
             <div
@@ -80,7 +80,7 @@
                     />
             </div>
         </div>
-        <div id="mars-background" ref="marsBackground"></div>
+        <div id="nbjump-background" ref="nbjumpBackground"></div>
     </div>
 </template>
 
@@ -214,7 +214,7 @@ export default {
         this.showRouterView = true;
         this.routerViewKey = this.$route.fullPath;
         this.isHomePage = this.$route.path === this.homePage;
-        this.$refs.marsBackground.style.backgroundColor = this.currentBackgroundColor || '#fff';
+        this.$refs.nbjumpBackground.style.backgroundColor = this.currentBackgroundColor || '#fff';
         this.hasNavigationBar = this.currentNavigationStyle === 'default';
     },
     methods: {
@@ -222,8 +222,8 @@ export default {
             this.transitionStatus = 'end';
             this.pos = 0;
             this.bodyHeight = 'auto';
-            this.$refs.currentRouter.$emit('marsTransitionEnterEnd');
-            this.$refs.marsBackground.style.backgroundColor = this.currentBackgroundColor || '#fff';
+            this.$refs.currentRouter.$emit('nbjumpTransitionEnterEnd');
+            this.$refs.nbjumpBackground.style.backgroundColor = this.currentBackgroundColor || '#fff';
             this.hasNavigationBar = this.currentNavigationStyle === 'default';
             this.$nextTick(() => {
                 if (this.isBack) {
@@ -314,7 +314,7 @@ export default {
 // 但是这里的框架 css 不需要经过 px 转换, 
 // 先通过注释 POSTCSS_PX2UNITS_COMMENT 来 disable, 后续考虑独立开
 
-#mars {
+#nbjump {
     width: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     scroll-behavior: smooth;
@@ -359,7 +359,7 @@ export default {
     }
 }
 
-#mars-background {
+#nbjump-background {
     position: fixed;
     z-index: -1;
     top: 0;

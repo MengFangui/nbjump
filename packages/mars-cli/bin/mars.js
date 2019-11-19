@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * @file mars-cli
+ * @file nbjump-cli
  * @author meixuguang
  */
 
@@ -32,7 +32,7 @@ function checkNodeVersion(wanted, id) {
     }
 }
 
-checkNodeVersion(requiredVersion, 'mars-cli');
+checkNodeVersion(requiredVersion, 'nbjump-cli');
 
 if (semver.satisfies(process.version, '9.x')) {
     console.log(chalk.red(
@@ -54,7 +54,7 @@ if (
 
 // 检查 cli 是否有更新，给出提示
 const cliVersion = getCliVersion();
-getPackageVersion('@marsjs/cli', 'latest')
+getPackageVersion('@nbjump/cli', 'latest')
     .then(data => {
         const latestVersion = data && data.version;
         if (!latestVersion) {
@@ -62,7 +62,7 @@ getPackageVersion('@marsjs/cli', 'latest')
         }
 
         if (semver.lt(cliVersion, latestVersion)) {
-            console.log(chalk.green(`@marsjs/cli 有更新，当前版本为 ${cliVersion}, 最新版本为 ${latestVersion}，请尽快升级。`));
+            console.log(chalk.green(`@nbjump/cli 有更新，当前版本为 ${cliVersion}, 最新版本为 ${latestVersion}，请尽快升级。`));
         }
     });
 
@@ -143,7 +143,7 @@ program
             useEslint: false,
             _isPreset: true,
             plugins: {
-                '@marsjs/cli-template': {
+                '@nbjump/cli-template': {
                     version: '^0.3.0',
                     noH5: target === 'noH5',
                     needPWA
@@ -166,7 +166,7 @@ program
         let files = await globby([
             '**/*',
             '!node_modules',
-            '!mars',
+            '!nbjump',
             '!package.json',
             '!package-lock.json'
         ], {cwd: basePath, deep: false, onlyFiles: false});
@@ -174,11 +174,11 @@ program
             await fs.remove(basePath + '/' + rawPath);
         }
 
-        files = await globby(['**/*'], {cwd: basePath + '/mars', deep: false, onlyFiles: false});
+        files = await globby(['**/*'], {cwd: basePath + '/nbjump', deep: false, onlyFiles: false});
         for (const rawPath of files) {
-            await fs.move(basePath + '/mars' + '/' + rawPath, basePath + '/' + rawPath);
+            await fs.move(basePath + '/nbjump' + '/' + rawPath, basePath + '/' + rawPath);
         }
-        fs.remove(basePath + '/mars');
+        fs.remove(basePath + '/nbjump');
     });
 
 
@@ -188,10 +188,10 @@ program
     .option('-r, --registry <url>', 'Use specified npm registry when installing dependencies (only for npm)')
     .option('-t, --target <target>', 'Build target (swan | h5 | wx, default: swan)')
     .option('-w, --watch', 'Open watch mode')
-    .option('--h5skip <process>', 'Skip h5 compile process (mars | vue)')
+    .option('--h5skip <process>', 'Skip h5 compile process (nbjump | vue)')
     .action(cmd => {
         const options = cleanArgs(cmd);
-        const buildPath = path.resolve(__dirname, './mars-build.js');
+        const buildPath = path.resolve(__dirname, './nbjump-build.js');
 
         const targets = (options.target || 'swan').split(',');
         targets.forEach(t => {
@@ -220,10 +220,10 @@ program
     .description('serve project in development mode')
     .option('-r, --registry <url>', 'Use specified npm registry when installing dependencies (only for npm)')
     .option('-t, --target <target>', 'Build target (swan | h5 | wx, default: swan)')
-    .option('--h5skip <process>', 'Skip h5 compile process (mars | vue)')
+    .option('--h5skip <process>', 'Skip h5 compile process (nbjump | vue)')
     .action(cmd => {
         const options = cleanArgs(cmd);
-        const buildPath = path.resolve(__dirname, './mars-serve.js');
+        const buildPath = path.resolve(__dirname, './nbjump-serve.js');
 
         const targets = (options.target || 'swan').split(',');
         targets.forEach(t => {
@@ -250,7 +250,7 @@ program
 
 program
     .command('update')
-    .description('update all mars dependences')
+    .description('update all nbjump dependences')
     .option('-r, --registry <url>', 'Use specified npm registry when installing dependencies (only for npm)')
     .option('-f, --force', 'Force update all denpenences to latest version')
     .action(cmd => {
@@ -266,7 +266,7 @@ program
 
 program
     .command('info')
-    .description('Diagnostics Mars env info')
+    .description('Diagnostics Nbjump env info')
     .action(cmd => {
         const info = require('../lib/info');
 

@@ -1,6 +1,6 @@
 /**
  * @file swan build unit test
- * @author mars
+ * @author nbjump
  */
 
 /* globals test*/
