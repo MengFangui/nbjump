@@ -1,6 +1,6 @@
 {
     "name": "@nbjump/build",
-    "version": "0.3.14",
+    "version": "0.3.15",
     "scripts": {
         "test": "jest --coverage"
     },
