@@ -1,6 +1,6 @@
 {
   "name": "@nbjump/cli-template",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "bin": {
     "nbjump-cli-service": "./bin/nbjump-cli-service.js"
   },
