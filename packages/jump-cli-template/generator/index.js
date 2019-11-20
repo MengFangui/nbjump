@@ -40,7 +40,7 @@ module.exports = async (api, options) => {
             devDependencies: {
                 'atom-web-compiler': '^2.2.0',
                 'atom2vue-loader': '^1.0.0',
-                '@nbjump/vue-cli-plugin-nbjump-web': '^0.0.9',
+                '@nbjump/vue-cli-plugin-nbjump-web': '^0.1.0',
                 // '@nbjump/vue-cli-plugin-pwa': '^0.0.1',
                 '@vue/cli-plugin-babel': '^3.0.0',
                 '@vue/cli-service': '^3.5.0',

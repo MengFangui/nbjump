@@ -5,7 +5,7 @@
     "nbjump-cli-service": "./bin/nbjump-cli-service.js"
   },
   "dependencies": {
-    "@nbjump/vue-cli-plugin-jump-web": "^0.0.9",
+    "@nbjump/vue-cli-plugin-jump-web": "^0.1.0",
     "@vue/cli-plugin-babel": "^3.0.0",
     "@vue/cli-service": "~3.5.1",
     "chalk": "^2.4.2",

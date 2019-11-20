@@ -1,6 +1,6 @@
 {
     "name": "@nbjump/vue-cli-plugin-jump-web",
-    "version": "0.0.10",
+    "version": "0.1.0",
     "description": "vue cli plugin nbjump web",
     "main": "index.js",
     "dependencies": {
